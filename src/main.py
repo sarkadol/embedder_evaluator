@@ -1,3 +1,4 @@
+#main.py
 from src.available_models import *
 from src.methods import *
 
@@ -13,8 +14,8 @@ if __name__ == "__main__":
         # Read content from .mdx files
         mdx_text = read_mdx_files()
 
-        if mdx_text:
-            print(f"\nLoaded .mdx content:\n{mdx_text[:500]}...")  # Show only first 500 chars
+        #if mdx_text:
+         #   print(f"\nLoaded .mdx content:\n{mdx_text[:100]}...")  # Show only first 500 chars
 
         # Define user query
         user_question = "Summarize the content of the uploaded MDX files."
