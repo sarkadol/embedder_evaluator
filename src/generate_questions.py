@@ -20,7 +20,6 @@ headers = {
 MDX_DIRECTORY = "../data/27-2-2025_docs"
 OUTPUT_JSON = "questions_mapping.json"
 
-
 def get_available_models():
     """Fetch available AI models."""
     response = requests.get(MODELS_URL, headers=headers)
@@ -31,29 +30,31 @@ def get_available_models():
         print(f"Error fetching models: {response.status_code}, {response.text}")
         return []
 
-
-def read_mdx_files(directory):
-    """Read all .mdx files and return their content in a dictionary format."""
+def read_english_mdx_files(directory):
+    """Recursively read all English .mdx files and return their content in a dictionary format."""
     mdx_files = {}
     if not os.path.exists(directory):
         print(f"Directory '{directory}' not found.")
         return {}
 
-    for filename in os.listdir(directory):
-        if filename.endswith(".mdx"):
-            file_path = os.path.join(directory, filename)
-            try:
-                with open(file_path, "r", encoding="utf-8") as file:
-                    mdx_files[filename] = file.read()
-            except Exception as e:
-                print(f"Error reading {filename}: {e}")
+    for root, _, files in os.walk(directory):
+        for filename in files:
+            if filename.endswith(".mdx") and not filename.endswith(".cz.mdx"):
+                file_path = os.path.join(root, filename)
+                key = f"{os.path.basename(root)}/{filename}"  # Use last folder and filename as key
+                try:
+                    with open(file_path, "r", encoding="utf-8") as file:
+                        mdx_files[key] = file.read()
+                except Exception as e:
+                    print(f"Error reading {filename}: {e}")
 
     return mdx_files
 
-
 def generate_questions(model_id, text, num_questions=5):
     """Generate a list of questions using the Chat API."""
-    prompt = f"Read the following content and generate {num_questions} relevant questions:\n\n{text}"
+    prompt = (f"Imagine that you are a user trying to find things in documentation."
+              f"Read the following content and generate {num_questions} relevant questions, that can be answered by reading this text. "
+              f"Write only questions, nothing more. The text: \n\n{text}")
 
     payload = {
         "model": model_id,
@@ -70,29 +71,31 @@ def generate_questions(model_id, text, num_questions=5):
         print(f"Error: {response.status_code}, {response.text}")
         return []
 
-
-def process_mdx_files():
-    """Read MDX files, generate questions, and save them in JSON format."""
+def process_english_mdx_files():
+    """Read English MDX files, generate questions, and save them in JSON format."""
     models = get_available_models()
     if not models:
         print("No available models.")
         return
 
-    selected_model = models[0]
-    mdx_data = read_mdx_files(MDX_DIRECTORY)
+    selected_model = models[7]
+    mdx_data = read_english_mdx_files(MDX_DIRECTORY)
+
+    print(f"Processing {len(mdx_data)} English MDX files using model: {selected_model}")
 
     questions_data = {}
 
-    for filename, content in mdx_data.items():
-        print(f"Generating questions for: {filename}")
+    for i, (key, content) in enumerate(mdx_data.items()):
+        if i >= 10: # maximum files processed
+            break
+        print(f"Generating questions for: {key}")
         questions = generate_questions(selected_model, content, num_questions=5)
-        questions_data[filename] = questions
+        questions_data[key] = questions
 
     with open(OUTPUT_JSON, "w", encoding="utf-8") as json_file:
         json.dump(questions_data, json_file, indent=4)
 
     print(f"Questions saved to {OUTPUT_JSON}")
 
-
 if __name__ == "__main__":
-    process_mdx_files()
+    process_english_mdx_files()

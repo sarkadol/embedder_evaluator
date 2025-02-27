@@ -1,5 +1,4 @@
-#main.py
-from src.available_models import *
+#contact_chatbot.py
 from src.methods import *
 
 if __name__ == "__main__":
@@ -7,6 +6,8 @@ if __name__ == "__main__":
     models = get_available_models()
 
     if models:
+        for model in models:
+            print(model)
 
         selected_model = models[0]
         print(f"\nUsing model: {selected_model}")
@@ -18,7 +19,7 @@ if __name__ == "__main__":
          #   print(f"\nLoaded .mdx content:\n{mdx_text[:100]}...")  # Show only first 500 chars
 
         # Define user query
-        user_question = "Summarize the content of the uploaded MDX files."
+        user_question = "Summarize the content of the uploaded MDX file."
 
         # Combine file content with the question
         full_prompt = f"{mdx_text}\n\nNow, based on the above content, {user_question}"

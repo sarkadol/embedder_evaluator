@@ -68,11 +68,34 @@ def find_duplicate_mdx_filenames(directory):
     return duplicates
 
 
+def find_largest_mdx_file(directory):
+    """ Find the largest .mdx file by character count. """
+    largest_file = None
+    largest_size = 0
+
+    for root, _, files in os.walk(directory):
+        for file in files:
+            if file.endswith(".mdx"):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                        size = len(content)
+                        if size > largest_size:
+                            largest_size = size
+                            largest_file = file_path
+                except Exception as e:
+                    print(f"Error reading {file_path}: {e}")
+
+    return largest_file, largest_size
+
+
 if __name__ == "__main__":
     # Run the check
     total_files, missing_headers = count_mdx_files_and_check_headers(DATA_DIR)
     czech_files, english_files = count_czech_and_english_files(DATA_DIR)
     duplicate_mdx_files = find_duplicate_mdx_filenames(DATA_DIR)
+    largest_file, largest_size = find_largest_mdx_file(DATA_DIR)
 
     # Print the results
     print(f"\nTotal .mdx files found: {total_files}")
@@ -94,3 +117,8 @@ if __name__ == "__main__":
                 print(f"  - {location}")
     else:
         print("No duplicate .mdx filenames found!\n")
+
+    if largest_file:
+        print(f"The largest .mdx file is: {largest_file} with {largest_size} characters.")
+    else:
+        print("No .mdx files found!")
