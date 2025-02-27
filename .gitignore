@@ -29,3 +29,5 @@ pip-delete-this-directory.txt
 # Ignore system files
 Thumbs.db
 .DS_Store
+
+data/

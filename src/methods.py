@@ -26,7 +26,7 @@ def get_available_models():
         print(f"Error fetching models: {response.status_code}, {response.text}")
         return []
 
-def read_mdx_files(directory="data"):
+def read_mdx_files(directory="../data/27-2-2025_docs"):
     """Read all .mdx files from the specified directory and return their content."""
     mdx_content = ""
     if not os.path.exists(directory):
@@ -60,36 +60,3 @@ def chat_with_model(model_id, prompt):
         return data["choices"][0]["message"]["content"]
     else:
         return f"Error: {response.status_code}, {response.text}"
-
-if __name__ == "__main__":
-    # Fetch available models
-    models = get_available_models()
-
-    if models:
-        print("Available models:")
-        for model in models:
-            print(f"- {model}")
-
-        selected_model = models[0]
-        print(f"\nUsing model: {selected_model}")
-
-        # Read content from .mdx files
-        mdx_text = read_mdx_files()
-
-        if mdx_text:
-            print(f"\nLoaded .mdx content:\n{mdx_text[:500]}...")  # Show only first 500 chars
-
-        # Define user query
-        user_question = "Summarize the content of the uploaded MDX files."
-
-        # Combine file content with the question
-        full_prompt = f"{mdx_text}\n\nNow, based on the above content, {user_question}"
-
-        print(f"\nYou: {user_question}")
-
-        # Send to chatbot
-        ai_response = chat_with_model(selected_model, full_prompt)
-
-        print(f"\nChatbot: {ai_response}")
-    else:
-        print("No models available.")
