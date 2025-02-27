@@ -27,7 +27,7 @@ def get_available_models():
         print(f"Error fetching models: {response.status_code}, {response.text}")
         return []
 
-def read_mdx_files(directory="../data/27-2-2025_docs"):
+def read_mdx_files(directory="../data/docs"):
     """Read all .mdx files from the specified directory and return their content."""
     mdx_content = ""
     if not os.path.exists(directory):

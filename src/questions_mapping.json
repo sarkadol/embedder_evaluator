@@ -1,72 +1,72 @@
 {
-    "27-2-2025_docs/news.mdx": [
-        "1. What new features are available with the New AI chat website?",
-        "2. How can users access the Better Docs AI Assistant and what models does it use?",
-        "3. What are the differences between the OpenAI, Local, and Problem Solving modes in the Better Docs AI Assistant?",
-        "4. How can users access AlphaFold 3 through Foldify, and what requirements must be met?",
-        "5. Where can users find more information about gaining access to the AI assistant for MetaCentrum users?"
+    "docs/news.mdx": [
+        "What are the three ways to use the new AI assistant available in the documentation?",
+        "How can users access the new AI chat website and API?",
+        "What is required to use AlphaFold 3 through the Foldify web tool?",
+        "Where can users find the new AI assistant in the user interface?",
+        "What model is used in the \"Problem Solving\" mode of the AI assistant?"
     ],
     "case-studies/nginx.mdx": [
-        "1. What is the purpose of setting a security context in a Kubernetes platform when deploying an NGINX web server?",
-        "2. How can you correctly set the user id and group id for the `nginx-unprivileged` image in Kubernetes?",
-        "3. What steps are necessary to add persistent storage to an NGINX deployment in Kubernetes?",
-        "4. How can you expose an NGINX web server running in Kubernetes to the internet?",
-        "5. What must be considered when creating an Ingress manifest for an NGINX deployment in Kubernetes?"
+        "What is the recommended user ID and group ID for running the nginx-unprivileged image in Kubernetes?",
+        "How can you change the default content served by the NGINX deployment to use a persistent volume?",
+        "What are the key components needed to expose the NGINX web server to the internet?",
+        "What security context settings are necessary for running NGINX in an unprivileged mode on Kubernetes?",
+        "How should the Ingress manifest be configured to provide a Let's Encrypt certificate for the NGINX deployment?"
     ],
     "case-studies/omero.mdx": [
-        "1. What are the two main components needed to run the Omero application in Kubernetes?",
-        "2. Why is the second option, \"Running the images (manual)\", chosen for deploying Omero in Kubernetes instead of using docker-compose?",
-        "3. How can you create a secret for the Postgres database when deploying Omero, and what encoding is required?",
-        "4. What are the user ID and group ID required for deploying the omero-server in Kubernetes?",
-        "5. What configurations are needed to make the omero-web accessible from the internet once it is deployed?"
+        "What are the two main components needed to run the Omero application in Kubernetes?",
+        "Why is the second option for deploying the Omero server chosen for Kubernetes instead of the first?",
+        "What is the purpose of creating a Kubernetes secret for the Postgres database?",
+        "How can you specify the user ID and group ID for the Omero server deployment?",
+        "What additional manifests are required to make the Omero web interface accessible from the internet?"
     ],
     "case-studies/vm.mdx": [
-        "1. What are the prerequisites for running a virtual machine as described in the documentation?",
-        "2. How can you generate an SSH key on Linux/MacOS according to the document?",
-        "3. Which Docker images are available for public use when running a virtual machine in this setup?",
-        "4. How can you make the home directory persistent across container restarts?",
-        "5. What steps are necessary to work with GPU resources in the virtual machine environment described?"
+        "What are the prerequisites for running a virtual machine according to the documentation?",
+        "How can you generate an SSH key on a Linux or MacOS system?",
+        "What should you do if you need a persistent home for your VM?",
+        "How can you install additional software in the virtual machine using conda?",
+        "What steps should you follow to increase shared memory (SHM) size for GPU applications?"
     ],
     "debugging/addshell.mdx": [
-        "1. What is the purpose of adding a shell to an image that doesn't have one?",
-        "2. What prerequisites are necessary before adding a shell to a Docker image?",
-        "3. Where can you download the `add_shell.sh` script needed to add a shell to an image?",
-        "4. How do you run the `add_shell.sh` script to add a shell to an image, and what optional parameter can you provide?",
-        "5. What steps must be taken to use the modified image with a shell in a Kubernetes environment?"
+        "How can I add a shell to an existing Docker image that lacks one?",
+        "What script is needed to add a shell to an image, and where can I find it?",
+        "How do I execute the `add_shell.sh` script with an image name and optional UID?",
+        "What tag does the script add to the image name when creating a new image with a shell?",
+        "What additional step must be taken to use the modified image in Kubernetes after adding a shell?"
     ],
     "debugging/faq.mdx": [
-        "1. What error might occur if a Pod, Job, or Deployment does not have the *resources* attribute set?",
-        "2. How can you resolve a deployment error when a Pod requests more memory than the available quota allows?",
-        "3. What should you do if a deployment returns `nvidia-smi` as `command not found`?",
-        "4. How can you fix a `CreateContainerConfigError` related to a container running as root when it should be running as a non-root user?",
-        "5. What is the suggested workaround for fixing an OpenSSL version mismatch error in a Conda environment?"
+        "What should be done if a Pod, Job, or Deployment fails to deploy due to missing resource attributes?",
+        "How can a Deployment error indicating exceeded memory quota be resolved?",
+        "What does it mean if `nvidia-smi` returns `command not found` and how can this be fixed?",
+        "How can a \"CreateContainerConfigError\" related to running as root be addressed in a Deployment?",
+        "What should be done to fix an error related to OpenSSL version mismatch in a Conda environment?"
     ],
     "docker/dockerfile.mdx": [
-        "1. What is the purpose of a Dockerfile in creating a Docker image?",
-        "2. How can you manually build a Docker image using a Dockerfile?",
-        "3. What are some common Dockerfile commands and their functions?",
-        "4. How can you run a Docker image locally and what precautions should you take?",
-        "5. What tips are provided for optimizing a Dockerfile to create a smaller image?"
+        "What is a Docker image and what does it typically contain?",
+        "How can you name a Docker image, and what happens if the registry is omitted?",
+        "What are some of the most common commands used in a Dockerfile?",
+        "Why is it important to chain commands with `&&` instead of `;` in a Dockerfile?",
+        "How can you manually build a Docker image and what is a potential follow-up action after building it?"
     ],
     "docker/harbor.mdx": [
-        "1. What are the advantages of using Harbor as a docker registry compared to other options like hub.docker.com?",
-        "2. How can a user log into Harbor using the command line, and what is required for this process?",
-        "3. What steps should be taken to push a Docker image to Harbor, and how is the image name structured?",
-        "4. How can a user manage their repository within Harbor, and what should they be aware of when deleting artifacts?",
-        "5. How does the vulnerability scan feature work in Harbor, and what can users do to address identified vulnerabilities?"
+        "How can users log into Harbor using their Masaryk University account?",
+        "What is the storage limit for each user's personal project in Harbor?",
+        "How can users manage space in their Harbor project if it becomes full?",
+        "What precautions should users take when creating Docker images to ensure sensitive information is not exposed?",
+        "How can users push Docker images to Harbor using the command line?"
     ],
     "docker/limitations.mdx": [
-        "1. Why can't users run Docker images with escalated privileges in this container platform?",
-        "2. What error will you encounter if you try to run a Docker image without specifying a numeric UID?",
-        "3. How can you fix the error related to running a container as root when no `USER` or `runAsUser` is specified?",
-        "4. What is a consequence of not having root privileges regarding port binding?",
-        "5. How can you write to directories like `/var/log/` without rebuilding the Docker image?"
+        "What is the consequence of not being able to run a Docker image as the root user on this platform?",
+        "How can a Docker image specify a user to run as, and what is the requirement for this specification?",
+        "What error message might you receive if a Docker image does not have a numeric UID?",
+        "What workaround can be used to write to directories like `/run` or `/var/log/`?",
+        "Why is installing packages in a running container considered an anti-pattern?"
     ],
     "examples/helloworld.mdx": [
-        "1. What are the three Kubernetes resources required to deploy the \"Hello world\" web application in this tutorial?",
-        "2. How is the \"hello-kubernetes\" Deployment configured to ensure security, and what user and group should the containers run as?",
-        "3. What is the purpose of creating a Service in the Kubernetes deployment, and how is it configured?",
-        "4. How can you expose HTTP and HTTPS routes from the outside world to the Kubernetes cluster, and what are the naming requirements for the DNS name in the Ingress configuration?",
-        "5. What are some of the kubectl commands mentioned in the tutorial that can be used to verify the status of deployed resources or get information about them?"
+        "What is the purpose of the `securityContext` in the Deployment configuration?",
+        "How can you expose a Kubernetes Deployment as a network service?",
+        "What are the requirements for naming an Ingress host in this tutorial?",
+        "How can you verify the status of deployed resources using `kubectl`?",
+        "What are the steps to mount a PersistentVolumeClaim into a Deployment?"
     ]
 }
