@@ -1,72 +1,9 @@
 {
-    "docs/news.mdx": [
-        "What are the three ways to use the new AI assistant available in the documentation?",
-        "How can users access the new AI chat website and API?",
-        "What is required to use AlphaFold 3 through the Foldify web tool?",
-        "Where can users find the new AI assistant in the user interface?",
-        "What model is used in the \"Problem Solving\" mode of the AI assistant?"
-    ],
-    "case-studies/nginx.mdx": [
-        "What is the recommended user ID and group ID for running the nginx-unprivileged image in Kubernetes?",
-        "How can you change the default content served by the NGINX deployment to use a persistent volume?",
-        "What are the key components needed to expose the NGINX web server to the internet?",
-        "What security context settings are necessary for running NGINX in an unprivileged mode on Kubernetes?",
-        "How should the Ingress manifest be configured to provide a Let's Encrypt certificate for the NGINX deployment?"
-    ],
-    "case-studies/omero.mdx": [
-        "What are the two main components needed to run the Omero application in Kubernetes?",
-        "Why is the second option for deploying the Omero server chosen for Kubernetes instead of the first?",
-        "What is the purpose of creating a Kubernetes secret for the Postgres database?",
-        "How can you specify the user ID and group ID for the Omero server deployment?",
-        "What additional manifests are required to make the Omero web interface accessible from the internet?"
-    ],
-    "case-studies/vm.mdx": [
-        "What are the prerequisites for running a virtual machine according to the documentation?",
-        "How can you generate an SSH key on a Linux or MacOS system?",
-        "What should you do if you need a persistent home for your VM?",
-        "How can you install additional software in the virtual machine using conda?",
-        "What steps should you follow to increase shared memory (SHM) size for GPU applications?"
-    ],
-    "debugging/addshell.mdx": [
-        "How can I add a shell to an existing Docker image that lacks one?",
-        "What script is needed to add a shell to an image, and where can I find it?",
-        "How do I execute the `add_shell.sh` script with an image name and optional UID?",
-        "What tag does the script add to the image name when creating a new image with a shell?",
-        "What additional step must be taken to use the modified image in Kubernetes after adding a shell?"
-    ],
-    "debugging/faq.mdx": [
-        "What should be done if a Pod, Job, or Deployment fails to deploy due to missing resource attributes?",
-        "How can a Deployment error indicating exceeded memory quota be resolved?",
-        "What does it mean if `nvidia-smi` returns `command not found` and how can this be fixed?",
-        "How can a \"CreateContainerConfigError\" related to running as root be addressed in a Deployment?",
-        "What should be done to fix an error related to OpenSSL version mismatch in a Conda environment?"
-    ],
-    "docker/dockerfile.mdx": [
-        "What is a Docker image and what does it typically contain?",
-        "How can you name a Docker image, and what happens if the registry is omitted?",
-        "What are some of the most common commands used in a Dockerfile?",
-        "Why is it important to chain commands with `&&` instead of `;` in a Dockerfile?",
-        "How can you manually build a Docker image and what is a potential follow-up action after building it?"
-    ],
-    "docker/harbor.mdx": [
-        "How can users log into Harbor using their Masaryk University account?",
-        "What is the storage limit for each user's personal project in Harbor?",
-        "How can users manage space in their Harbor project if it becomes full?",
-        "What precautions should users take when creating Docker images to ensure sensitive information is not exposed?",
-        "How can users push Docker images to Harbor using the command line?"
-    ],
-    "docker/limitations.mdx": [
-        "What is the consequence of not being able to run a Docker image as the root user on this platform?",
-        "How can a Docker image specify a user to run as, and what is the requirement for this specification?",
-        "What error message might you receive if a Docker image does not have a numeric UID?",
-        "What workaround can be used to write to directories like `/run` or `/var/log/`?",
-        "Why is installing packages in a running container considered an anti-pattern?"
-    ],
-    "examples/helloworld.mdx": [
-        "What is the purpose of the `securityContext` in the Deployment configuration?",
-        "How can you expose a Kubernetes Deployment as a network service?",
-        "What are the requirements for naming an Ingress host in this tutorial?",
-        "How can you verify the status of deployed resources using `kubectl`?",
-        "What are the steps to mount a PersistentVolumeClaim into a Deployment?"
+    "News": [
+        "What new AI chat web site and API have been introduced recently?",
+        "How can users access the new AI assistant available for documentation support?",
+        "What are the different ways users can utilize the Better Docs AI Assistant?",
+        "What web tool now supports AlphaFold 3 computation, and how can it be accessed?",
+        "What steps are required to use AlphaFold 3 through the Foldify tool?"
     ]
 }
