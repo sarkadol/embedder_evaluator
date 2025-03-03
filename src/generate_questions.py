@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import re
 
 # Define API endpoints
 MODELS_URL = "https://chat.ai.e-infra.cz/api/models"
@@ -32,14 +33,10 @@ def get_available_models():
         return []
 
 
-def extract_title(content):
-    """Extract title from MDX content."""
-    if content.startswith("---\n"):
-        lines = content.split("\n")
-        for line in lines:
-            if line.startswith("title: "):
-                return line.replace("title: ", "").strip()
-    return None
+def extract_title(text: str) -> str:
+    """Extracts the title from a structured text file."""
+    match = re.search(r'^title:\s*(.+)', text, re.MULTILINE)
+    return match.group(1).strip() if match else None
 
 
 def read_english_mdx_files(directory):

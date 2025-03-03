@@ -61,3 +61,11 @@ def chat_with_model(model_id, prompt):
         return data["choices"][0]["message"]["content"]
     else:
         return f"Error: {response.status_code}, {response.text}"
+
+
+import re
+
+def extract_title(text: str) -> str:
+    """Extracts the title from a structured text file."""
+    match = re.search(r'^---\s*\ntitle:\s*(.+)\s*\n---', text, re.MULTILINE)
+    return match.group(1) if match else None
