@@ -1,0 +1,387 @@
+{
+    "News": [
+        "Jaké informace lze nalézt v sekci s názvem \"News\"?",
+        "Jaký obsah by měl být uveden pod nadpisem \"none\"?",
+        "Co znamená ikona \"Single\" v kontextu této dokumentace?",
+        "Existuje v dokumentaci více sekcí s podobnou strukturou jako tato?",
+        "Jakým způsobem je organizována dokumentace, pokud obsahuje sekce jako \"News\" s nadpisem \"none\"?"
+    ],
+    "Jak spustit webový server NGINX": [
+        "Jaký je rozdíl mezi privilegovaným a neprivilegovaným režimem v Kubernetes?",
+        "Jaké hodnoty pro `RunAsUser` a `RunAsGroup` je třeba použít pro spuštění NGINX pomocí `nginx-unprivileged` image?",
+        "Jaký manifest je potřeba pro přidání trvalého úložiště pro NGINX?",
+        "Jaký port používá NGINX v `nginx-unprivileged` image podle dokumentace?",
+        "Co je potřeba upravit v manifestu `Ingress`, aby byl NGINX přístupný z internetu?"
+    ],
+    "Spuštění aplikace Omero": [
+        "Jaké jsou dvě hlavní věci, které potřebujeme pro spuštění aplikace Omero v Kubernetes?",
+        "Jaké jsou dvě možnosti nasazení serveru Omero nalezené na GitHubu?",
+        "Proč je nutné zvolit druhou možnost nasazení serveru Omero pro Kubernetes?",
+        "Jakým způsobem se zajišťuje, aby `omero-server` a `omero-web` byly přístupné z clusteru?",
+        "Jaké kroky je třeba provést, aby se `omero-web` stal přístupným z internetu?"
+    ],
+    "Spuštění Virtuálního Stroje": [
+        "Jaké jsou požadavky pro spuštění virtuálního stroje?",
+        "Jak vygenerovat SSH klíč na Linuxu nebo MacOS?",
+        "Jaký je proces vytvoření secret s veřejným SSH klíčem v Kubernetes?",
+        "Jaké docker obrazy jsou dostupné pro použití jako základní obrazy?",
+        "Jak nainstalovat CUDA pomocí conda/mamba v běžícím kontejneru?"
+    ],
+    "Přidání shellu do obrazu, který jej nemá": [
+        "Jaké jsou výhody přidání shellu do obrazu, který jej původně neobsahuje?",
+        "Jak stáhnout skript `add_shell.sh` potřebný pro přidání shellu do obrazu?",
+        "Jakým způsobem specifikovat UID uživatele obrazu při spouštění skriptu `add_shell.sh`?",
+        "Jakým způsobem se změní název obrazu po přidání shellu pomocí skriptu `add_shell.sh`?",
+        "Jak publikovat upravený obraz s přidaným shellem do Kubernetes?"
+    ],
+    "FAQ": [
+        "Jaké atributy musí být nastaveny pro Pod, Job nebo Deployment, aby nasazení nevyvolalo chybu kvóty?",
+        "Co může způsobit chybu, kdy nasazení vrací zprávu o překročení kvóty v Namespace?",
+        "Jak lze vyřešit problém, kdy `nvidia-smi` vrací `command not found`?",
+        "Jaké nastavení je potřeba upravit, pokud nasazení vrací chybu `CreateContainerConfigError` kvůli bezpečnostnímu kontextu?",
+        "Co znamená chybový kód 413 při nasazení pomocí Helm a jak ho lze řešit?"
+    ],
+    "Dockerfile": [
+        "Jaké jsou hlavní kroky pro ruční sestavení Docker image pomocí Dockerfile?",
+        "Jakým způsobem lze udržovat výsledný Docker image co nejmenší?",
+        "Jaké jsou doporučené praktiky pro řetězení příkazů v Dockerfile?",
+        "Co je potřeba udělat, pokud chci zabránit spuštění ENTRYPOINT při testování Docker image?",
+        "Kdy je doporučeno použít automatizované sestavení Docker image místo ručního?"
+    ],
+    "Harbor (hub.cerit.io)": [
+        "Jaké jsou hlavní výhody používání Harboru oproti veřejným registrům jako je hub.docker.com?",
+        "Jaký je limit pro ukládání artefaktů v osobním projektu uživatele Harboru?",
+        "Jakým způsobem se mohou uživatelé přihlásit do Harboru přes příkazový řádek?",
+        "Jaké operace mohou uživatelé provádět s artefakty ve svém repozitáři v Harboru?",
+        "Co by měli uživatelé zvážit při zahrnování citlivých informací do Docker obrazů v Harboru?"
+    ],
+    "Omezení spouštění Docker obrazů": [
+        "Jaké jsou důsledky nemožnosti spouštět Docker obrazy jako uživatel `root`?",
+        "Co se stane, pokud Docker obraz nemá specifikovaný číselný `UID`?",
+        "Jak lze řešit situaci, kdy nelze zapisovat do adresářů jako `/run` nebo `/var/log/`?",
+        "Jaké jsou doporučení pro naslouchání služeb na portech nižších než 1024?",
+        "Jaké jsou možné způsoby specifikace uživatele pro spuštění Docker obrazu?"
+    ],
+    "Tutorial pro Hello World": [
+        "Jaké jsou tři základní Kubernetes zdroje potřebné pro nasazení aplikace podle tohoto tutoriálu?",
+        "Jaký kontejnerový obraz je použit v příkladu nasazení aplikace Hello World?",
+        "Jak lze vystavit aplikaci jako síťovou službu pomocí Kubernetes?",
+        "Jaké jsou dva hlavní kroky k připojení PersistentVolumeClaim k nasazení?",
+        "Jaké bezpečnostní zásady jsou specifikovány pro kontejnery, které běží v `kuba-cluster`?"
+    ],
+    "GitLab Kubernetes Agent": [
+        "Jaké jsou hlavní požadavky pro instalaci GitLab Kubernetes Agenta?",
+        "Jak vytvoříte konfigurační soubor pro GitLab Kubernetes Agenta?",
+        "Jakým způsobem se zaregistruje GitLab Kubernetes Agent a jak získáte jeho token?",
+        "Jak vytvoříte tajemství pro uložení tokenu agenta v Kubernetes?",
+        "Jak zkontrolujete, zda GitLab Kubernetes Agent úspěšně běží ve vašem clusteru?"
+    ],
+    "Vytváření Docker kontejnerů s GitLab": [
+        "Jaké jsou požadavky pro nastavení GitLab pipeline pro vytváření Docker kontejnerů?",
+        "Jak se konfiguruje soubor `.gitlab-ci.yml` pro automatické vytváření a publikaci Docker image?",
+        "Jak lze nastavit viditelnost projektu a kontejnerového registru v GitLab pro použití bez autentizace?",
+        "Jak se autentizovat do soukromého kontejnerového registru, pokud je viditelnost projektu omezena?",
+        "Jak změnit příkaz `docker login` pro nahrání Docker image do vlastního kontejnerového registru?"
+    ],
+    "Ukládání Kubernetes Secrets do Gitu": [
+        "Jaký je hlavní problém při ukládání Kubernetes Secrets do git repozitáře?",
+        "Jaké jsou požadavky pro bezpečné uložení Kubernetes Secret do gitu?",
+        "Jak nainstalovat nástroj kubeseal?",
+        "Jaký je postup pro převod Kubernetes Secret na Sealed Secret?",
+        "Jaké bezpečnostní opatření je implementováno, aby zamezilo zneužití Sealed Secret v jiných namespacech?"
+    ],
+    "Certifikát": [
+        "Jakým způsobem Kubernetes spravuje certifikáty pro ne-webové aplikace?",
+        "Jaký je rozdíl mezi vydavatelem `letsencrypt-prod` a `letsencrypt-prod-dns`?",
+        "Proč je kontrola dns pomalejší než webová kontrola u certifikátů?",
+        "Jaký vydavatel certifikátů by měl být použit pro testování pomocí stagingových serverů?",
+        "Co je obsaženo v tajemství generovaném pomocí konfigurace v `spec.secretName`?"
+    ],
+    "Vystavování aplikací": [
+        "Jaký je rozdíl mezi webovými aplikacemi a ostatními aplikacemi z hlediska IP adres?",
+        "Jaká je role služby a pravidel ingress při vystavování webové aplikace?",
+        "Jak lze nastavit autentizaci uživatelů pro přístup k aplikaci vystavené pomocí Ingress?",
+        "Jaké jsou kroky k řešení problému s nevydaným certifikátem při použití Let's Encrypt?",
+        "Jak lze omezit přístup k webové aplikaci pomocí anotace `nginx.ingress.kubernetes.io/whitelist-source-range`?"
+    ],
+    "Kubectl": [
+        "Kde najdu oficiální dokumentaci pro instalaci kubectl?",
+        "Jaký soubor je vyžadován pro fungování kubectl po instalaci?",
+        "Jaké oprávnění by měl mít soubor `$HOME/.kube/config`?",
+        "Co mám udělat, pokud soubor `$HOME/.kube/config` neexistuje?",
+        "Je možné mít více konfigurací clusterů v jednom konfiguračním souboru?"
+    ],
+    "Namespaces": [
+        "Co poskytují namespaces v Kubernetes?",
+        "Jak musí být jména namespaces v rámci clusteru?",
+        "Co se stane po prvním přihlášení uživatele do Ranger GUI?",
+        "Kde může uživatel zkontrolovat své namespaces v Rancher?",
+        "Jak by měl uživatel vytvořit namespace, aby byl propojen s jeho projektem?"
+    ],
+    "Úložiště": [
+        "Jaké jsou tři důležité objekty Kubernetes související s úložištěm?",
+        "Jaké jsou výkonnostní charakteristiky třídy úložiště csi-ceph-rbd-du?",
+        "Jak může uživatel vytvořit ad-hoc PVC pomocí pvc.yaml šablony?",
+        "Jaké jsou možnosti pro přidání hesla při přístupu ke skladování WebDAV?",
+        "Co se stane s daty na ephemeral úložišti, když je Pod vyhozen nebo přesunut na jiný uzel?"
+    ],
+    "GPU a další zdroje": [
+        "Jaký je rozdíl mezi *Požadavky* a *Limity* v kontextu alokace zdrojů v Kubernetes?",
+        "Jakým způsobem lze zvýšit velikost sdílené paměti pro kontejner?",
+        "Jakým způsobem lze specifikovat požadavek na GPU zdroje v Kubernetes?",
+        "Co se stane, pokud uzel překročí limity stanovené pro disk nebo paměť?",
+        "Jaké jednotky se používají pro specifikaci paměťových zdrojů v Kubernetes?"
+    ],
+    "Bezpečnost a síťová politika": [
+        "Jak může být zmírněna bezpečnostní chyba související s autentizací při přístupu z vnitřku Kubernetes clusteru?",
+        "Jaké konkrétní anotace je nutné přidat do ingressu pro podporu SSO?",
+        "Jaký je účel služby definované v konfiguračním souboru YAML pro SSO?",
+        "Jaké změny je třeba provést v YAML souboru pro konfiguraci SSO endpointu?",
+        "Jakým způsobem může uživatel omezit přístup na webovou stránku pomocí seznamu uživatelů?"
+    ],
+    "Bezpečnostní Kontext": [
+        "Jaké změny přináší Kubernetes verze 1.25 v oblasti bezpečnostních politik pro pody?",
+        "Co nahradí zastaralé Pod Security Policies (PSP) v Kubernetes verzi 1.25?",
+        "Jaké jsou důležité nové možnosti pro bezpečnostní kontext Podu?",
+        "Jaké důležité nové možnosti je potřeba přidat do bezpečnostního kontextu kontejneru?",
+        "Proč je důležité přidat `fsGroupChangePolicy: OnRootMismatch` do bezpečnostního kontextu Podu?"
+    ],
+    "Logging": [
+        "Jaké dvě hlavní komponenty tvoří loggingovou pipeline v Kubernetes clusteru?",
+        "Jaké operátory lze použít v příkazech `match` v rámci `SyslogNGFlow`?",
+        "Jakým způsobem lze konfigurovat výstupní destinaci logů v `SyslogNGOutput`?",
+        "Jaký je příkaz pro nasazení nové loggingové pipeline pomocí YAML souboru?",
+        "Kde lze najít podrobnější informace o směrování logů a dostupných výstupních pluginech?"
+    ],
+    "MinIO Operator": [
+        "Jaké jsou hlavní funkce MinIO Operatoru na Kubernetes?",
+        "Jak lze nasadit MinIO Tenant a jaké jsou specifikace pro standalone a distributed režimy?",
+        "Jaké typy služeb jsou vytvořeny pro přístup k MinIO Tenant a k čemu slouží?",
+        "Jaké jsou základní bezpečnostní politiky, které lze aplikovat na MinIO Tenant pro zajištění síťové bezpečnosti?",
+        "Jak lze zakódovat a dekódovat `access_key` a `secret_key` pro MinIO Tenant?"
+    ],
+    "MPI Operator": [
+        "Jaké jsou dva hlavní kroky potřebné k tomu, aby bylo možné spustit MPI úlohu?",
+        "Jaké balíčky musí být nainstalovány v Docker obraze pro MPIJob?",
+        "Který uživatel musí být přidán do Docker obrazu a jaké konfigurační fragmenty je nutné použít?",
+        "Jaký je význam atributu `Worker.replicas` v manifestu MPI Job?",
+        "Jakým příkazem se spustí MPI Job na Kubernetes?"
+    ],
+    "Přehled Operátorů": [
+        "Co jsou některé z úkolů, které operátoři automatizují?",
+        "Jaké jsou důvody, proč se nedoporučuje nasazovat operátory v rámci jmenného prostoru?",
+        "Jaké oprávnění je často vyžadováno pro nasazení operátorů?",
+        "Jaké služby nabízí IT Service desk ohledně nasazení operátorů?",
+        "Kde můžete zkontrolovat různé operátory pro Kubernetes?"
+    ],
+    "Postgres Operator Cloudnative-PG": [
+        "Jaká je doporučená strategie pro zvýšení výkonu a dostupnosti při nasazení PostgreSQL clusteru pomocí Postgres Operator?",
+        "Jak lze upravit přihlašovací údaje k databázi při použití Postgres Operator?",
+        "Které kroky jsou nutné pro zálohování dat PostgreSQL clusteru do S3 úložiště?",
+        "Jaké jsou doporučené postupy pro zabezpečení přístupu k databázi zvenčí Kubernetes clusteru?",
+        "Jaké jsou hlavní rozdíly mezi použitím NFS úložiště a lokálního úložiště (SSD) pro PostgreSQL cluster?"
+    ],
+    "Spark Operator": [
+        "Jaké jsou hlavní cíle použití Spark Operatoru v Kubernetes prostředí?",
+        "Jaké jsou klíčové kroky při konfiguraci oprávnění Spark aplikace?",
+        "Jakým způsobem lze správně připojit objem k Spark aplikaci v Kubernetes clusteru?",
+        "Jak se lze dostat k Spark UI pro konkrétní aplikaci a co je potřeba udělat, aby byl přístup funkční?",
+        "Jak lze přizpůsobit SparkUI Ingress pomocí vlastních anotací nebo TLS tajných klíčů?"
+    ],
+    "Secrets pro úložiště": [
+        "Jaké typy objektů lze vytvořit pro přístup k úložným serverům?",
+        "Jaké jsou požadavky pro použití služby pro generování tajemství?",
+        "Kde můžete najít více informací o prostoru názvů, pokud jej neznáte?",
+        "Jak dlouho může trvat, než je vaše kerberos jméno spojeno s vaším Rancher účtem?",
+        "K čemu lze použít Samba tajemství při práci s aplikací Matlab?"
+    ],
+    "VPN": [
+        "Jak nainstalovat WireGuard na Windows pro použití s Secure VPN?",
+        "Jak vytvořit a uložit konfigurační soubor pro Secure VPN na Windows?",
+        "Jak aktivovat a deaktivovat tunel Secure VPN na Windows pomocí aplikace WireGuard?",
+        "Jak nainstalovat WireGuard na Linux pro použití s Secure VPN?",
+        "Jak aktivovat a kontrolovat statistiky tunelu Secure VPN na Linuxovém operačním systému?"
+    ],
+    "Jak získat přístup": [
+        "Jaké podmínky musí uživatel splnit pro bezplatný přístup k platformě CERIT-SC Kubernetes?",
+        "Co se stane s uživatelským účtem, pokud není prodloužen do 2. února?",
+        "Jaký je vzorec poděkování, který musí uživatel zahrnout do publikací vytvořených s podporou MetaCentra?",
+        "Kde může uživatel změnit své heslo pro účet v Metacentru?",
+        "Jak může uživatel zkontrolovat stav své žádosti o účet v Metacentru?"
+    ],
+    "Kontakty": [
+        "Jaký je kontaktní email pro požadavkový systém?",
+        "Která univerzita je zodpovědná za tento požadavkový systém?",
+        "Jaké informace lze očekávat pod nadpisem \"Kontakty\"?",
+        "Která organizace poskytuje emailovou adresu k8s@ics.muni.cz?",
+        "Jak mohu kontaktovat podporu požadavkového systému na MU?"
+    ],
+    "Dostupný hardware": [
+        "Jaké GPU akcelerátory jsou dostupné v kuba-clusteru?",
+        "Kolik uzlů tvoří kubh-cluster a kde jsou fyzicky umístěny?",
+        "Jaká je konfigurace úložného systému v zabezpečeném clusteru?",
+        "Jaké jsou specifikace připravovaných kub-c uzlů?",
+        "Jakým způsobem je řešeno zálohování dat ve všech clusterech?"
+    ],
+    "Přehled platformy kontejnerů": [
+        "Jaká architektura a operační systém jsou podporovány platformou kontejnerů?",
+        "Jaké akcelerátory a úložiště poskytuje platforma?",
+        "Jaké znalosti jsou potřebné pro použití platformy?",
+        "Jaké jsou možnosti přihlášení pro uživatele platformy?",
+        "Jaké jsou tři způsoby, jak může uživatel využívat platformu?"
+    ],
+    "Projekty, Namespaces a Kvóty": [
+        "Jaké jsou aktuálně aplikované kvóty na zdroje pro osobní projekt a výchozí namespace?",
+        "Jak lze změnit kvóty zdrojů pro existující namespace?",
+        "Proč by neměly být namespaces vytvářeny pomocí kubectl nebo helm?",
+        "Jaké kroky je třeba podniknout k vytvoření nového namespace v uživatelském rozhraní Rancher?",
+        "Co se stane, pokud kontejner překročí limity pro CPU nebo Paměť?"
+    ],
+    "Rancher": [
+        "Jaké metody přihlášení jsou k dispozici pro přístup k Rancheru?",
+        "Co jsou to clustery a jakou roli hrají v Rancheru?",
+        "Jaký je vztah mezi projekty a namespaces v rámci Rancheru?",
+        "Jak se vytváří namespaces v Rancheru a co by uživatelé neměli používat k jejich vytvoření?",
+        "Jak může uživatel zjistit, ke kterým clusterům má přístup v Rancheru?"
+    ],
+    "Žádost o projekt, řízení přístupu": [
+        "Jaké jsou dva typy projektů v Kubernetes clusteru?",
+        "Jaké jsou výchozí kvóty pro skupinový projekt v Rancheru?",
+        "Jaké informace je třeba uvést při žádosti o vytvoření nové skupiny pro projekt Rancher?",
+        "Jaké kroky musí administrátor provést pro přiřazení skupiny v CESNET Perun?",
+        "Jaké informace je třeba zahrnout do e-mailu při žádosti o větší individuální projekt?"
+    ],
+    "Ansys": [
+        "Jaké jsou kroky pro spuštění aplikace Ansys v prostředí Rancher?",
+        "Jakým způsobem je možné zachovat data v domovském adresáři po odinstalaci a následné reinstalaci aplikace Ansys?",
+        "Jaké jsou možnosti připojení k běžící instanci Ansys a jaký je rozdíl mezi metodami VNC a WEBRTC?",
+        "Co dělat, pokud aplikace Ansys při instalaci nevybere možnost \"Přizpůsobit možnosti Helm před instalací\"?",
+        "Jaké jsou doporučené limity pro CPU při instalaci Ansys a co dělat, pokud jsou potřeba vyšší hodnoty?"
+    ],
+    "Desktop": [
+        "Jaké kroky je třeba provést pro spuštění desktopové aplikace na rancher.cloud.e-infra.cz?",
+        "Jaké jsou dostupné verze operačních systémů pro desktopovou aplikaci?",
+        "Jak se liší připojení k desktopové aplikaci pomocí VNC a WEBRTC?",
+        "Jakým způsobem lze nainstalovat další software do běžícího desktopu?",
+        "Co se stane s daty v domovském adresáři po odstranění desktopové aplikace, pokud byl zvolen trvalý domov?"
+    ],
+    "Matlab": [
+        "Jaké kroky je třeba dodržet pro spuštění aplikace Matlab na platformě Rancher?",
+        "Jaké omezení na počet CPU je třeba dodržovat při spuštění Matlabu a jak lze požádat o zvýšení tohoto limitu?",
+        "Jaké jsou rozdíly mezi metodami VNC a WEBRTC při připojování k běžící instanci Matlabu?",
+        "Jak je možné připojit domovský adresář MetaCentrum k Matlabu bez zadání hesla?",
+        "Co se stane s daty v domovském adresáři, pokud aplikaci Matlab odstraníte a později ji znovu nainstalujete se stejným názvem?"
+    ],
+    "Minio": [
+        "Jaké kroky je třeba podniknout pro spuštění osobního serveru Minio?",
+        "Jaký je význam Persistent Volume Claim (PVC) pro provoz serveru Minio?",
+        "Jak se dá ověřit, zda je vzdálený souborový systém připojen k domovu?",
+        "Jaké přihlašovací údaje jsou potřebné pro přístup k aplikaci Minio?",
+        "Jakým způsobem lze smazat běžící instanci aplikace Minio?"
+    ],
+    "Moodle": [
+        "Jaký je postup pro spuštění webové aplikace Moodle na platformě Rancher?",
+        "Jaké možnosti přizpůsobení jsou dostupné při instalaci Moodle, konkrétně v sekci 'General'?",
+        "Jak lze nakonfigurovat zálohování databáze Moodle a jaké parametry jsou pro to dostupné?",
+        "Jaký je postup pro přihlášení do běžící instance Moodle po jejím spuštění?",
+        "Jak lze smazat běžící instanci Moodle a co se stane s daty v domovském adresáři?"
+    ],
+    "ownCloud": [
+        "Jaké kroky jsou potřebné ke spuštění aplikace klienta ownCloud?",
+        "Jaká je důležitá podmínka pro synchronizaci dat pomocí klienta ownCloud?",
+        "Jak můžete zkontrolovat, zda je vzdálený souborový systém připojen k domovskému adresáři?",
+        "Jaké údaje je potřeba vyplnit při instalaci aplikace ownCloud?",
+        "Co se stane s daty v domovském adresáři, když je aplikace ownCloud odstraněna?"
+    ],
+    "phpMyAdmin": [
+        "Jak se můžete přihlásit na rancher.cloud.e-infra.cz?",
+        "Jaké kroky musíte podniknout pro instalaci aplikace phpMyAdmin?",
+        "Jaké údaje je třeba zadat při přihlašování do phpMyAdmin?",
+        "Jaký port byste měli vyplnit při přizpůsobování aplikace phpMyAdmin?",
+        "Jak lze aplikaci phpMyAdmin odinstalovat?"
+    ],
+    "Osobní monitorování": [
+        "Jaké kroky jsou potřeba k instalaci aplikace Osobní monitorování v Rancheru?",
+        "Kde najdu webovou adresu pro přístup ke své monitorovací instanci Grafany?",
+        "Je možné změnit název nasazeného grafu při instalaci Osobního monitorování?",
+        "Co je potřeba udělat po instalaci, abyste se mohli autentizovat do Grafany?",
+        "Jak zjistím, že instalace aplikace Osobní monitorování proběhla úspěšně?"
+    ],
+    "Rancher Aplikace": [
+        "Jaký je maximální počet garantovaných CPU, které mohu vybrat pro spuštění aplikace?",
+        "Co mám udělat, pokud chci více CPU, než je stanovená kvóta?",
+        "Co se stane, pokud při instalaci aplikace nevyberu `Přizpůsobit možnosti Helm před instalací`?",
+        "Jaké kroky musím následovat, abych vybral aplikaci k spuštění v Rancheru?",
+        "Kterou aplikaci je možné vybrat jako příklad v sekci `Vyberte aplikaci k spuštění`?"
+    ],
+    "RStudio": [
+        "Jaké jsou dva způsoby, jak spustit RStudio podle dokumentace?",
+        "Jaké jsou požadavky pro spuštění RStudia ve webovém JupyterHubu?",
+        "Jaký je postup pro přihlášení do běžící instance RStudia v Rancheru?",
+        "Jaké jsou možnosti pro připojení úložiště k aplikaci RStudio v Rancheru?",
+        "Jak lze nainstalovat další balíčky pomocí nástroje `conda` nebo `mamba` v RStudiu?"
+    ],
+    "Samba Server": [
+        "Jaký formát má URL pro přístup k síťovému disku vystavenému pomocí Samba serveru?",
+        "Jaké jsou požadavky pro úspěšné spuštění Samba serveru?",
+        "Jaké jsou kroky pro instalaci Samba serveru v GUI Rancher?",
+        "Jak lze přistoupit k síťovému disku z různých operačních systémů, jako jsou Linux, Windows a MacOS?",
+        "Jaké přihlašovací údaje jsou potřeba pro přístup k síťovému disku vystavenému Samba serverem?"
+    ],
+    "Scipion": [
+        "Jaké informace potřebujete k vyplnění formuláře pro připojení Onedata při instalaci aplikace Scipion?",
+        "Jaký je doporučený počet garantovaných CPU a celkový počet CPU pro spuštění aplikace Scipion?",
+        "Jaké kroky je třeba podniknout, pokud se rozhodnete aplikaci Scipion smazat?",
+        "Co se stane s daty uloženými mimo připojená úložiště Onedata, pokud aplikaci odstraníte a znovu nainstalujete?",
+        "Jakým způsobem probíhá synchronizace dat mezi Onedata spaces a Kubernetes volumes při používání aplikace Scipion?"
+    ],
+    "ShinySOM": [
+        "Jak se přihlásit na platformu Rancher pro spuštění ShinySOM?",
+        "Jaké kroky jsou potřebné k instalaci aplikace ShinySOM?",
+        "Proč je důležité zvolit jedinečné jméno pro aplikaci ShinySOM v rámci Namespace?",
+        "Jaké jsou doporučení pro výběr hesla při instalaci ShinySOM?",
+        "Co se stane, pokud aplikace ShinySOM překročí maximální povolené zdroje CPU nebo RAM?"
+    ],
+    "BinderHub": [
+        "Jakým způsobem se musí uživatel autentizovat pro použití instance CERIT-SC BinderHub?",
+        "Jaká jsou omezení zdrojů (paměť a CPU) pro uživatele na JupyterHub?",
+        "Jakým způsobem může uživatel specifikovat vlastní množství zdrojů nebo připojit GPU?",
+        "Jak se generují a používají SSH klíče uvnitř instance BinderHub?",
+        "Co se stane s notebooky, které jsou nečinné po dobu jednoho týdne?"
+    ],
+    "JupyterHub": [
+        "Jaký je požadavek na přístup k JupyterHub na hub.cloud.e-infra.cz?",
+        "Jaké jsou minimální zaručené zdroje (CPU a RAM) pro běh notebooku na JupyterHubu?",
+        "Jaké obrazy jsou předpřipraveny pro použití na JupyterHubu?",
+        "Jaký je postup pro vytvoření vlastního obrazu pro použití na JupyterHubu?",
+        "Jak funguje mechanismus pro odstranění nečinných instancí notebooků na JupyterHubu?"
+    ],
+    "NBGrader Docs": [
+        "Jaké jsou podmínky pro přístup na jupytul?",
+        "Jaké kroky musí student udělat, pokud nevidí kurz po přihlášení do jupytul?",
+        "Co by měl instruktor udělat, pokud byl dodatečně přidán jako instruktor do kurzu?",
+        "Jaké jsou doporučené postupy pro přidání studentů a instruktorů do kurzu?",
+        "Jaké jsou omezení pro vytváření a umisťování assignments v NBGrader Tulhub?"
+    ],
+    "Spuštění Nextflow Pipelines v Kubernetes": [
+        "Jaké kroky je třeba provést pro instalaci Nextflow na místním počítači?",
+        "Jaké jsou klíčové komponenty architektury Nextflow a jak spolupracují?",
+        "Jaké jsou požadavky pro spuštění Nextflow pipeline v Kubernetes?",
+        "Jaké jsou doporučené postupy pro paralelní spuštění Nextflow pipeline?",
+        "Jaké debugovací techniky jsou doporučeny pro sledování pipeline v Kubernetes?"
+    ],
+    "Snakemake": [
+        "Co je Snakemake?",
+        "Jaké jsou hlavní funkce Snakemake?",
+        "Jak používá Snakemake správu závislostí?",
+        "Jaký je typický pracovní postup při používání Snakemake?",
+        "Existují nějaké konkrétní příklady projektů, kde byl Snakemake úspěšně použit?"
+    ],
+    "TES/WES": [
+        "Co je TESK a na jaké API je založený?",
+        "Jaký je účel mikroservisy WES?",
+        "Kde lze najít český koncový bod pro TESK?",
+        "Kde lze najít český koncový bod pro WES?",
+        "Jaké pracovní postupy umožňuje WES vykonávat?"
+    ]
+}

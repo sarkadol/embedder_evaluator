@@ -8,8 +8,8 @@ DATA_DIR = "../data"  # Change this if your files are in another folder
 REQUIRED_HEADER = "---\ntitle: "  # Example MDX frontmatter starts with YAML metadata
 
 
-def count_mdx_files_and_check_headers(directory):
-    """ Recursively count .mdx files and check for a required header. """
+def count_mdx_files_and_check_headers(directory, language=None):
+    """ Recursively count .mdx files, check for required headers, and analyze titles."""
     mdx_count = 0
     missing_header_files = []
     titles = []
@@ -17,7 +17,7 @@ def count_mdx_files_and_check_headers(directory):
     # Walk through the directory tree
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith(".mdx") and not file.endswith(".cz.mdx"):
+            if file.endswith(".mdx") and (language is None or (language == "czech") == file.endswith(".cz.mdx")):
                 mdx_count += 1
                 file_path = os.path.join(root, file)
 
@@ -48,17 +48,9 @@ def count_mdx_files_and_check_headers(directory):
 
 def count_czech_and_english_files(directory):
     """ Count Czech (.cz.mdx) and English (.mdx) files separately. """
-    czech_count = 0
-    english_count = 0
-
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if file.endswith(".cz.mdx"):
-                czech_count += 1
-            elif file.endswith(".mdx") and not file.endswith(".cz.mdx"):
-                english_count += 1
-
-    return czech_count, english_count
+    czech_data = count_mdx_files_and_check_headers(directory, "czech")
+    english_data = count_mdx_files_and_check_headers(directory, "english")
+    return czech_data[0], english_data[0], czech_data[2], english_data[2]
 
 
 def find_duplicate_mdx_filenames(directory):
@@ -73,15 +65,12 @@ def find_duplicate_mdx_filenames(directory):
                 else:
                     filenames[file] = [root]
 
-    duplicates = {name: paths for name, paths in filenames.items() if len(paths) > 1}
-
-    return duplicates
+    return {name: paths for name, paths in filenames.items() if len(paths) > 1}
 
 
 def find_largest_mdx_file(directory):
     """ Find the largest .mdx file by character count. """
-    largest_file = None
-    largest_size = 0
+    largest_file, largest_size = None, 0
 
     for root, _, files in os.walk(directory):
         for file in files:
@@ -103,7 +92,7 @@ def find_largest_mdx_file(directory):
 if __name__ == "__main__":
     # Run the check
     total_files, missing_headers, duplicate_titles = count_mdx_files_and_check_headers(DATA_DIR)
-    czech_files, english_files = count_czech_and_english_files(DATA_DIR)
+    czech_files, english_files, duplicate_czech_titles, duplicate_english_titles = count_czech_and_english_files(DATA_DIR)
     duplicate_mdx_files = find_duplicate_mdx_filenames(DATA_DIR)
     largest_file, largest_size = find_largest_mdx_file(DATA_DIR)
 
@@ -128,12 +117,19 @@ if __name__ == "__main__":
     else:
         print("No duplicate .mdx filenames found!\n")
 
-    if duplicate_titles:
-        print(f"\nDuplicate English titles found ({len(duplicate_titles)}):")
-        for title, count in duplicate_titles.items():
+    if duplicate_czech_titles:
+        print(f"\nDuplicate Czech titles found ({len(duplicate_czech_titles)}):")
+        for title, count in duplicate_czech_titles.items():
             print(f"- '{title}' appears {count} times")
     else:
-        print("\nAll English titles are unique!\n")
+        print("All Czech titles are unique.\n")
+
+    if duplicate_english_titles:
+        print(f"\nDuplicate English titles found ({len(duplicate_english_titles)}):")
+        for title, count in duplicate_english_titles.items():
+            print(f"- '{title}' appears {count} times")
+    else:
+        print("All English titles are unique.\n")
 
     if largest_file:
         print(f"The largest .mdx file is: {largest_file} with {largest_size} characters.")
