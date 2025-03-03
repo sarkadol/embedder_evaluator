@@ -1,0 +1,236 @@
+[
+    {
+        "question": "How can custom annotations be added to the Spark UI Ingress in a Spark application YAML file?",
+        "correct_document": "Spark Operator",
+        "retrieved_documents": [
+            {
+                "score": 0.7293908063015777,
+                "title": "Spark Operator"
+            },
+            {
+                "score": 0.7101808151442475,
+                "title": "Spark Operator"
+            },
+            {
+                "score": 0.6071620264326476,
+                "title": "Exposing Applications"
+            },
+            {
+                "score": 0.5995878994588651,
+                "title": "Hello world tutorial"
+            },
+            {
+                "score": 0.5982831415956382,
+                "title": "Security and Network Policy"
+            }
+        ]
+    },
+    {
+        "question": "How can volumes be mounted in the Spark Operator, given that `hostPath` is not allowed?",
+        "correct_document": "Spark Operator",
+        "retrieved_documents": [
+            {
+                "score": 0.7355966794270848,
+                "title": "Spark Operator"
+            },
+            {
+                "score": 0.7075171875789761,
+                "title": "Spark Operator"
+            },
+            {
+                "score": 0.6891433906894812,
+                "title": "Hello world tutorial"
+            },
+            {
+                "score": 0.67273501482808,
+                "title": "Omezení spouštění Docker obrazů"
+            },
+            {
+                "score": 0.6527467237727317,
+                "title": "Tutorial pro Hello World"
+            }
+        ]
+    },
+    {
+        "question": "What is the purpose of the Spark Operator in Kubernetes?",
+        "correct_document": "Spark Operator",
+        "retrieved_documents": [
+            {
+                "score": 0.8690431738883921,
+                "title": "Spark Operator"
+            },
+            {
+                "score": 0.8142205476761095,
+                "title": "Spark Operator"
+            },
+            {
+                "score": 0.7216221456593722,
+                "title": "Postgres Operator Cloudnative-PG"
+            },
+            {
+                "score": 0.7077038856701487,
+                "title": "MinIO Operator"
+            },
+            {
+                "score": 0.7060573171479686,
+                "title": "MinIO Operator"
+            }
+        ]
+    },
+    {
+        "question": "What is Snakemake?",
+        "correct_document": "Snakemake",
+        "retrieved_documents": [
+            {
+                "score": 0.7784735396300193,
+                "title": "Snakemake"
+            },
+            {
+                "score": 0.48609439821457856,
+                "title": "Spuštění Nextflow Pipelines v Kubernetes"
+            },
+            {
+                "score": 0.4821400200682977,
+                "title": "Exposing Applications"
+            },
+            {
+                "score": 0.4811467593074432,
+                "title": "Running Virtual Machine"
+            },
+            {
+                "score": 0.47568436039435824,
+                "title": "Vystavování aplikací"
+            }
+        ]
+    },
+    {
+        "question": "What are the primary features of Snakemake?",
+        "correct_document": "Snakemake",
+        "retrieved_documents": [
+            {
+                "score": 0.7382908215533424,
+                "title": "Snakemake"
+            },
+            {
+                "score": 0.5247838653559703,
+                "title": "Rancher Aplikace"
+            },
+            {
+                "score": 0.5133244274041354,
+                "title": "Spuštění Virtuálního Stroje"
+            },
+            {
+                "score": 0.5091148755745885,
+                "title": "Spuštění Nextflow Pipelines v Kubernetes"
+            },
+            {
+                "score": 0.5075777635885582,
+                "title": "Namespaces"
+            }
+        ]
+    },
+    {
+        "question": "Is there a guide on how to create workflows using Snakemake?",
+        "correct_document": "Snakemake",
+        "retrieved_documents": [
+            {
+                "score": 0.6886247474997381,
+                "title": "Snakemake"
+            },
+            {
+                "score": 0.6336233497703179,
+                "title": "Running Nextflow Pipelines in Kubernetes"
+            },
+            {
+                "score": 0.6115332112869859,
+                "title": "Spuštění Nextflow Pipelines v Kubernetes"
+            },
+            {
+                "score": 0.5924529808873307,
+                "title": "Welcome to the CERIT-SC Kubernetes Container Platform"
+            },
+            {
+                "score": 0.5896482543669819,
+                "title": "Projects, Namespaces, and Quotas"
+            }
+        ]
+    },
+    {
+        "question": "What is the purpose of creating a `secret` with a public SSH key in this process?",
+        "correct_document": "Running Virtual Machine",
+        "retrieved_documents": [
+            {
+                "score": 0.8062392570118225,
+                "title": "Running Virtual Machine"
+            },
+            {
+                "score": 0.7106122625604039,
+                "title": "Exposing Applications"
+            },
+            {
+                "score": 0.6883901729119059,
+                "title": "Use case Omero"
+            },
+            {
+                "score": 0.6821668554644011,
+                "title": "Storing Kubernetes Secrets in Git"
+            },
+            {
+                "score": 0.6769320790605734,
+                "title": "JupyterHub"
+            }
+        ]
+    },
+    {
+        "question": "Which Docker images are available for use in creating a virtual machine-like environment?",
+        "correct_document": "Running Virtual Machine",
+        "retrieved_documents": [
+            {
+                "score": 0.7197884226223986,
+                "title": "Welcome to the CERIT-SC Kubernetes Container Platform"
+            },
+            {
+                "score": 0.7185577675241921,
+                "title": "Jobs"
+            },
+            {
+                "score": 0.7162642817182409,
+                "title": "Dockerfile"
+            },
+            {
+                "score": 0.7119628231492185,
+                "title": "BinderHub"
+            },
+            {
+                "score": 0.7119491868049505,
+                "title": "Running Virtual Machine"
+            }
+        ]
+    },
+    {
+        "question": "What steps are required to enable GPU support in a containerized environment?",
+        "correct_document": "Running Virtual Machine",
+        "retrieved_documents": [
+            {
+                "score": 0.8022799249387278,
+                "title": "Running Nextflow Pipelines in Kubernetes"
+            },
+            {
+                "score": 0.7771648863403401,
+                "title": "Running Virtual Machine"
+            },
+            {
+                "score": 0.7383816113982031,
+                "title": "FAQ"
+            },
+            {
+                "score": 0.7378153175867413,
+                "title": "Jobs"
+            },
+            {
+                "score": 0.7215697071129927,
+                "title": "GPU and other Resources"
+            }
+        ]
+    }
+]
