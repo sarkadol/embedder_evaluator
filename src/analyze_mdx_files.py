@@ -1,4 +1,3 @@
-#analyze_mdx_files.py
 import os
 from collections import Counter
 
@@ -13,27 +12,38 @@ def count_mdx_files_and_check_headers(directory):
     """ Recursively count .mdx files and check for a required header. """
     mdx_count = 0
     missing_header_files = []
+    titles = []
 
     # Walk through the directory tree
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith(".mdx"):
+            if file.endswith(".mdx") and not file.endswith(".cz.mdx"):
                 mdx_count += 1
                 file_path = os.path.join(root, file)
 
                 # Read the first few lines of the file
                 try:
                     with open(file_path, "r", encoding="utf-8") as f:
-                        first_lines = f.read(100)  # Read first 100 characters
+                        content = f.read()
 
                         # Check if the required header is present
-                        if REQUIRED_HEADER not in first_lines:
+                        if REQUIRED_HEADER not in content:
                             missing_header_files.append(file_path)
 
+                        # Extract title if present
+                        if content.startswith("---\n"):
+                            lines = content.split("\n")
+                            for line in lines:
+                                if line.startswith("title: "):
+                                    titles.append(line.replace("title: ", "").strip())
+                                    break
                 except Exception as e:
                     print(f"Error reading {file_path}: {e}")
 
-    return mdx_count, missing_header_files
+    title_counts = Counter(titles)
+    duplicate_titles = {title: count for title, count in title_counts.items() if count > 1}
+
+    return mdx_count, missing_header_files, duplicate_titles
 
 
 def count_czech_and_english_files(directory):
@@ -92,7 +102,7 @@ def find_largest_mdx_file(directory):
 
 if __name__ == "__main__":
     # Run the check
-    total_files, missing_headers = count_mdx_files_and_check_headers(DATA_DIR)
+    total_files, missing_headers, duplicate_titles = count_mdx_files_and_check_headers(DATA_DIR)
     czech_files, english_files = count_czech_and_english_files(DATA_DIR)
     duplicate_mdx_files = find_duplicate_mdx_filenames(DATA_DIR)
     largest_file, largest_size = find_largest_mdx_file(DATA_DIR)
@@ -117,6 +127,13 @@ if __name__ == "__main__":
                 print(f"  - {location}")
     else:
         print("No duplicate .mdx filenames found!\n")
+
+    if duplicate_titles:
+        print(f"\nDuplicate English titles found ({len(duplicate_titles)}):")
+        for title, count in duplicate_titles.items():
+            print(f"- '{title}' appears {count} times")
+    else:
+        print("\nAll English titles are unique!\n")
 
     if largest_file:
         print(f"The largest .mdx file is: {largest_file} with {largest_size} characters.")
