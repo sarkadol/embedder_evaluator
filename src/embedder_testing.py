@@ -51,7 +51,8 @@ def evaluate_embedder(json_file, q, k, d, lang, output_file):
                 if extracted_title:
                     retrieved_docs.append({
                         "score": similarity.get("score", "N/A"),
-                        "title": extracted_title
+                        "title": extracted_title,
+                        "ID": similarity.get('id', 'N/A')
                     })
                 else:
                     print(f"Warning: No title extracted from response data: {similarity.get('data', '')}")
@@ -70,9 +71,9 @@ def evaluate_embedder(json_file, q, k, d, lang, output_file):
 
 if __name__ == "__main__":
     # Parameters set in code instead of command-line arguments
-    q = 3  # Number of questions per document
+    q = 6  # Number of questions per document
     k = 5  # Number of top retrieved documents
-    d = 3  # Number of documents to test
+    d = 100  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
     output_file = "results.json"  # Output file for results
 
