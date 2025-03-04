@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+import argparse
 
 
 # Function to evaluate embedder results
@@ -48,8 +49,12 @@ def evaluate_results(results_file, output_file):
 
 
 if __name__ == "__main__":
-    results_file = "results.json"  # Input file with retrieved results
-    output_file = "evaluation.csv"  # Output CSV file
+    # Argument parser
+    parser = argparse.ArgumentParser(description="Evaluate embedder results.")
+    parser.add_argument("--results_file", type=str, required=True, help="Path to the JSON file with retrieved results.")
+    parser.add_argument("--output_file", type=str, required=True, help="Path to save the evaluation CSV file.")
 
-    df = evaluate_results(results_file, output_file)
+    args = parser.parse_args()
+
+    df = evaluate_results(args.results_file, args.output_file)
     print(df.head())

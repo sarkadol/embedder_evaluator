@@ -91,36 +91,44 @@ def generate_questions(model_id, text, num_questions=5, language="english"):
     print(f"Error: {response.status_code}, {response.text}")
     return []
 
+import argparse
 
-def process_mdx_files(language="english"):
-    """Read MDX files in the chosen language, generate questions, and save them in JSON format."""
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generate questions from MDX files using an AI model.")
+    parser.add_argument("--language", type=str, default="english", choices=["english", "czech"],
+                        help="Specify the language of the MDX files.")
+    parser.add_argument("--num_questions", type=int, default=5,
+                        help="Number of questions to generate per document.")
+    parser.add_argument("--max_files", type=int, default=70,
+                        help="Maximum number of MDX files to process.")
+    parser.add_argument("--model", type=str, help="Specify the AI model to use.")
+
+    args = parser.parse_args()
+
+    # Fetch available models
     models = get_available_models()
     if not models:
         print("No available models.")
-        return
+        exit(1)
 
-    selected_model = models[7]
-    mdx_data = read_mdx_files(MDX_DIRECTORY, language)
+    # Select model (default to the 7th model if none is provided)
+    selected_model = args.model if args.model in models else models[7]
+    print(f"\nUsing model: {selected_model}")
 
-    print(f"Processing {len(mdx_data)} {language} MDX files using model: {selected_model}")
+    # Read content from MDX files
+    mdx_data = read_mdx_files(MDX_DIRECTORY, args.language)
+
+    print(f"Processing {len(mdx_data)} {args.language} MDX files using model: {selected_model}")
 
     questions_data = {}
     for i, (title, content) in enumerate(mdx_data.items()):
-        if i >= 70:  # Maximum files processed
+        if i >= args.max_files:
             break
         print(f"Generating questions for: {title}")
-        questions_data[title] = generate_questions(selected_model, content, num_questions=5, language=language)
+        questions_data[title] = generate_questions(selected_model, content, num_questions=args.num_questions, language=args.language)
 
-    output_file = f"questions_mapping_{language}.json"
+    output_file = f"questions_mapping_{args.language}.json"
     with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(questions_data, json_file, indent=4,ensure_ascii=False)
+        json.dump(questions_data, json_file, indent=4, ensure_ascii=False)
+
     print(f"Questions saved to {output_file}")
-
-
-if __name__ == "__main__":
-    #lang_choice = input("Choose language (english/czech): ").strip().lower()
-    lang_choice = "czech"
-    if lang_choice not in ["english", "czech"]:
-        print("Invalid choice. Defaulting to English.")
-        lang_choice = "english"
-    process_mdx_files(lang_choice)
