@@ -130,8 +130,8 @@ def process_mdx_files(language, max_files, num_questions, model_id):
 if __name__ == "__main__":
     # ----------------------------------------------
     language = "english"  # Choose "english" or "czech"
-    max_files = 1  # Set the maximum number of files to process
-    num_questions = 1  # Number of questions per document
+    max_files = 100  # Set the maximum number of files to process
+    num_questions = 5  # Number of questions per document
     model_id = "gpt-4o"  # Set the model ID
     # ----------------------------------------------
 

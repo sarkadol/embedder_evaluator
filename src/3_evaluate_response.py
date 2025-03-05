@@ -4,9 +4,9 @@ import os
 
 
 # Function to evaluate embedder results
-def evaluate_results(embedder):
-    results_file = f"embedder_{embedder}/results_{embedder}.json"
-    output_file = f"embedder_{embedder}/evaluation_{embedder}.csv"
+def evaluate_results(embedder, language):
+    results_file = f"embedder_{embedder}/results_{language}_{embedder}.json"
+    output_file = f"embedder_{embedder}/evaluation_{language}_{embedder}.csv"
 
     if not os.path.exists(results_file):
         raise FileNotFoundError(f"Error: The results file '{results_file}' does not exist.")
@@ -65,8 +65,9 @@ def evaluate_results(embedder):
 
 if __name__ == "__main__":
     # ----------------------------------------------
-    embedder = 1
+    embedder = 1  # Select embedder
+    language = "english"  # Choose "english" or "czech"
     # ----------------------------------------------
 
-    df = evaluate_results(embedder)
+    df = evaluate_results(embedder, language)
     print(df.head())
