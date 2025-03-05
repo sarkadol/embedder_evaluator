@@ -5,7 +5,7 @@ from pathlib import Path
 from src.methods import *
 import urllib3
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) # this supresses the unverified https request warning
+#urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) # this supresses the unverified https request warning
 
 
 # Function to query the embedder API
@@ -70,12 +70,13 @@ def evaluate_embedder(json_file, q, k, d, lang, embedder, output_file):
 
 
 if __name__ == "__main__":
+    print("running 2_embedder_generating.py")
     # ----------------------------------------------
     q = 5  # Number of questions per document
     k = 5  # Number of top retrieved documents
     d = 100  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
-    embedder = 1  # Change this to 2 for embedder_2
+    embedder = 2  # Change this to 2 for embedder_2
     # ----------------------------------------------
 
     output_file = f"embedder_{embedder}/results_{lang}_{embedder}.json"  # Output file for results

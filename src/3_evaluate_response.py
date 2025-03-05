@@ -64,8 +64,10 @@ def evaluate_results(embedder, language):
 
 
 if __name__ == "__main__":
+    print("running 3_evaluate_response.py")
+
     # ----------------------------------------------
-    embedder = 1  # Select embedder
+    embedder = 2  # Select embedder
     language = "english"  # Choose "english" or "czech"
     # ----------------------------------------------
 
