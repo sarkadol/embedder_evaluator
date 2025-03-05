@@ -1,15 +1,8 @@
 import requests
 import json
-import re
 import random
 from pathlib import Path
 from src.methods import *
-
-
-# Function to extract title using regex
-def extract_title(text: str) -> str:
-    match = re.search(r'---\s*title:\s*(.*?)\s*---', text, re.MULTILINE)
-    return match.group(1).strip() if match else None
 
 
 # Function to query the embedder API
@@ -45,15 +38,17 @@ def evaluate_embedder(json_file, q, k, d, lang, embedder, output_file):
 
             retrieved_docs = []
             for similarity in response_data.get("similarities", []):
-                extracted_title = extract_title(similarity.get("data", ""))
+                metadata = similarity.get("metadata", {})
+                extracted_title = metadata.get("title")
+
                 if extracted_title:
                     retrieved_docs.append({
                         "score": similarity.get("score", "N/A"),
-                        "title": extracted_title,
-                        "ID": similarity.get('id', 'N/A')
+                        "ID": similarity.get("id", "N/A"),
+                        "metadata": {key: value for key, value in metadata.items() if key != "data"}
                     })
                 else:
-                    print(f"Warning: No title extracted from response data: {similarity.get('data', '')}")
+                    print(f"Warning: No title extracted from metadata: {metadata}")
 
             results["evaluations"].append({
                 "question": question,
@@ -71,9 +66,9 @@ if __name__ == "__main__":
     # ----------------------------------------------
     q = 5  # Number of questions per document
     k = 5  # Number of top retrieved documents
-    d = 10  # Number of documents to test
+    d = 1  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
-    embedder = 2  # Change this to 2 for embedder_2
+    embedder = 1  # Change this to 2 for embedder_2
     # ----------------------------------------------
 
     output_file = f"embedder_{embedder}/results_{embedder}.json"  # Output file for results

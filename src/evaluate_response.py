@@ -21,7 +21,7 @@ def evaluate_results(embedder):
     for entry in results["evaluations"]:
         question = entry["question"]
         correct_document = entry["correct_document"]
-        retrieved_documents = [doc["title"] for doc in entry["retrieved_documents"]]
+        retrieved_documents = [doc["metadata"]["title"] for doc in entry["retrieved_documents"] if "metadata" in doc and "title" in doc["metadata"]]
 
         correct_found = correct_document in retrieved_documents
         position = retrieved_documents.index(correct_document) + 1 if correct_found else None

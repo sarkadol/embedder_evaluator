@@ -5,7 +5,7 @@ from src.methods import *
 
 #----------------------------------------------
 embedder = 1  # Change this to 2 for embedder_2
-top_k = 5
+top_k = 2
 #----------------------------------------------
 
 

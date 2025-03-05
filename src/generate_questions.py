@@ -7,11 +7,13 @@ import re
 MODELS_URL = "https://chat.ai.e-infra.cz/api/models"
 CHAT_URL = "https://chat.ai.e-infra.cz/api/chat/completions"
 
+
 # Read API key from file
 def load_api_key(filepath="api_key.txt"):
     """Load API key from a file."""
     with open(filepath, "r", encoding="utf-8") as file:
         return file.read().strip()
+
 
 API_KEY = load_api_key()
 
@@ -44,6 +46,8 @@ def extract_title(text: str) -> str:
 def read_mdx_files(directory, language="english"):
     """Recursively read .mdx files of the chosen language and return their content indexed by title."""
     mdx_files = {}
+    lang_code = "cz" if language == "czech" else "en"
+
     if not os.path.exists(directory):
         print(f"Directory '{directory}' not found.")
         return {}
@@ -57,7 +61,7 @@ def read_mdx_files(directory, language="english"):
                         content = file.read()
                         title = extract_title(content)
                         if title:
-                            mdx_files[title] = content
+                            mdx_files[title] = {"content": content, "metadata": {"title": title, "lang": lang_code}}
                         else:
                             print(f"Warning: No title found in {filename}")
                 except Exception as e:
@@ -105,20 +109,25 @@ def process_mdx_files(language="english"):
     print(f"Processing {len(mdx_data)} {language} MDX files using model: {selected_model}")
 
     questions_data = {}
-    for i, (title, content) in enumerate(mdx_data.items()):
-        if i >= 70:  # Maximum files processed
+    for i, (title, data) in enumerate(mdx_data.items()):
+        if i >= 1:  # Maximum files processed
             break
         print(f"Generating questions for: {title}")
-        questions_data[title] = generate_questions(selected_model, content, num_questions=5, language=language)
+        questions = generate_questions(selected_model, data["content"], num_questions=5, language=language)
 
-    output_file = f"questions_mapping_{language}.json"
+        questions_data[title] = {
+            "questions": questions,
+            "metadata": data["metadata"]
+        }
+
+    output_file = f"questions_mapping_{language}_2.json"
     with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(questions_data, json_file, indent=4,ensure_ascii=False)
+        json.dump(questions_data, json_file, indent=4, ensure_ascii=False)
     print(f"Questions saved to {output_file}")
 
 
 if __name__ == "__main__":
-    #lang_choice = input("Choose language (english/czech): ").strip().lower()
+    # lang_choice = input("Choose language (english/czech): ").strip().lower()
     lang_choice = "czech"
     if lang_choice not in ["english", "czech"]:
         print("Invalid choice. Defaulting to English.")
