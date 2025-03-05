@@ -43,7 +43,7 @@ def extract_title(text: str) -> str:
     return match.group(1).strip() if match else None
 
 
-def read_mdx_files(directory, language="english"):
+def read_mdx_files(directory, language, max_files):
     """Recursively read .mdx files of the chosen language and return their content indexed by title."""
     mdx_files = {}
     lang_code = "cz" if language == "czech" else "en"
@@ -52,8 +52,11 @@ def read_mdx_files(directory, language="english"):
         print(f"Directory '{directory}' not found.")
         return {}
 
+    count = 0
     for root, _, files in os.walk(directory):
         for filename in files:
+            if count >= max_files:
+                break
             if filename.endswith(".mdx") and (language == "czech") == filename.endswith(".cz.mdx"):
                 file_path = os.path.join(root, filename)
                 try:
@@ -62,6 +65,7 @@ def read_mdx_files(directory, language="english"):
                         title = extract_title(content)
                         if title:
                             mdx_files[title] = {"content": content, "metadata": {"title": title, "lang": lang_code}}
+                            count += 1
                         else:
                             print(f"Warning: No title found in {filename}")
                 except Exception as e:
@@ -69,7 +73,7 @@ def read_mdx_files(directory, language="english"):
     return mdx_files
 
 
-def generate_questions(model_id, text, num_questions=5, language="english"):
+def generate_questions(model_id, text, num_questions, language):
     """Generate a list of questions using the Chat API."""
     if language == "czech":
         prompt = (f"Představ si, že jsi uživatel, který se snaží najít informace v dokumentaci. "
@@ -96,40 +100,43 @@ def generate_questions(model_id, text, num_questions=5, language="english"):
     return []
 
 
-def process_mdx_files(language="english"):
+def process_mdx_files(language, max_files, num_questions, model_id):
     """Read MDX files in the chosen language, generate questions, and save them in JSON format."""
     models = get_available_models()
     if not models:
         print("No available models.")
         return
 
-    selected_model = models[7]
-    mdx_data = read_mdx_files(MDX_DIRECTORY, language)
+    mdx_data = read_mdx_files(MDX_DIRECTORY, language, max_files)
 
-    print(f"Processing {len(mdx_data)} {language} MDX files using model: {selected_model}")
+    print(f"Processing {len(mdx_data)} {language} MDX files using model: {model_id}")
 
     questions_data = {}
-    for i, (title, data) in enumerate(mdx_data.items()):
-        if i >= 1:  # Maximum files processed
-            break
+    for title, data in mdx_data.items():
         print(f"Generating questions for: {title}")
-        questions = generate_questions(selected_model, data["content"], num_questions=5, language=language)
+        questions = generate_questions(model_id, data["content"], num_questions, language)
 
         questions_data[title] = {
             "questions": questions,
             "metadata": data["metadata"]
         }
 
-    output_file = f"questions_mapping_{language}_2.json"
+    output_file = f"questions_mapping_{language}.json"
     with open(output_file, "w", encoding="utf-8") as json_file:
         json.dump(questions_data, json_file, indent=4, ensure_ascii=False)
     print(f"Questions saved to {output_file}")
 
 
 if __name__ == "__main__":
-    # lang_choice = input("Choose language (english/czech): ").strip().lower()
-    lang_choice = "czech"
-    if lang_choice not in ["english", "czech"]:
+    # ----------------------------------------------
+    language = "english"  # Choose "english" or "czech"
+    max_files = 1  # Set the maximum number of files to process
+    num_questions = 1  # Number of questions per document
+    model_id = "gpt-4o"  # Set the model ID
+    # ----------------------------------------------
+
+    if language not in ["english", "czech"]:
         print("Invalid choice. Defaulting to English.")
-        lang_choice = "english"
-    process_mdx_files(lang_choice)
+        language = "english"
+
+    process_mdx_files(language, max_files, num_questions, model_id)

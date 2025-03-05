@@ -3,6 +3,9 @@ import json
 import random
 from pathlib import Path
 from src.methods import *
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) # this supresses the unverified https request warning
 
 
 # Function to query the embedder API
@@ -28,7 +31,9 @@ def evaluate_embedder(json_file, q, k, d, lang, embedder, output_file):
     selected_docs = random.sample(list(questions_mapping.keys()), min(d, len(questions_mapping)))
 
     for doc_title in selected_docs:
-        questions = random.sample(questions_mapping[doc_title], min(q, len(questions_mapping[doc_title])))
+        doc_metadata = questions_mapping[doc_title]["metadata"]
+        correct_lang = doc_metadata.get("lang", "unknown")
+        questions = random.sample(questions_mapping[doc_title]["questions"], min(q, len(questions_mapping[doc_title]["questions"])))
 
         for question in questions:
             response_data = query_embedder(question, k, embedder_url)
@@ -40,6 +45,7 @@ def evaluate_embedder(json_file, q, k, d, lang, embedder, output_file):
             for similarity in response_data.get("similarities", []):
                 metadata = similarity.get("metadata", {})
                 extracted_title = metadata.get("title")
+                retrieved_lang = metadata.get("lang", "unknown")
 
                 if extracted_title:
                     retrieved_docs.append({
@@ -53,6 +59,7 @@ def evaluate_embedder(json_file, q, k, d, lang, embedder, output_file):
             results["evaluations"].append({
                 "question": question,
                 "correct_document": doc_title,
+                "correct_language": correct_lang,
                 "retrieved_documents": retrieved_docs
             })
 
@@ -68,10 +75,10 @@ if __name__ == "__main__":
     k = 5  # Number of top retrieved documents
     d = 1  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
-    embedder = 1  # Change this to 2 for embedder_2
+    embedder = 2  # Change this to 2 for embedder_2
     # ----------------------------------------------
 
-    output_file = f"embedder_{embedder}/results_{embedder}.json"  # Output file for results
+    output_file = f"embedder_{embedder}/results_{lang}_{embedder}.json"  # Output file for results
 
     json_file = "questions_mapping_czech.json" if lang == "czech" else "questions_mapping_english.json"
     evaluate_embedder(json_file, q, k, d, lang, embedder, output_file)

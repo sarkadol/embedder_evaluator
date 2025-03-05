@@ -2,6 +2,7 @@ import json
 import pandas as pd
 import os
 
+
 # Function to evaluate embedder results
 def evaluate_results(embedder):
     results_file = f"embedder_{embedder}/results_{embedder}.json"
@@ -21,10 +22,16 @@ def evaluate_results(embedder):
     for entry in results["evaluations"]:
         question = entry["question"]
         correct_document = entry["correct_document"]
-        retrieved_documents = [doc["metadata"]["title"] for doc in entry["retrieved_documents"] if "metadata" in doc and "title" in doc["metadata"]]
+        question_lang = entry.get("correct_language", "unknown")
+        retrieved_docs = entry["retrieved_documents"]
 
-        correct_found = correct_document in retrieved_documents
-        position = retrieved_documents.index(correct_document) + 1 if correct_found else None
+        retrieved_titles = [doc["metadata"].get("title", "") for doc in retrieved_docs if "metadata" in doc]
+        retrieved_langs = [doc["metadata"].get("lang", "unknown") for doc in retrieved_docs if "metadata" in doc]
+        num_czech = sum(1 for lang in retrieved_langs if lang == "cz")
+        num_engl = sum(1 for lang in retrieved_langs if lang == "en")
+
+        correct_found = correct_document in retrieved_titles
+        position = retrieved_titles.index(correct_document) + 1 if correct_found else None
 
         if correct_found:
             correct_matches += 1
@@ -35,9 +42,12 @@ def evaluate_results(embedder):
         evaluations.append({
             "question": question,
             "correct_document": correct_document,
-            "retrieved_documents": ", ".join(retrieved_documents),
+            "retrieved_documents": ", ".join(retrieved_titles),
             "position": position,
-            "correct_found": correct_found
+            "correct_found": correct_found,
+            "question_lang": question_lang,
+            "num_czech": num_czech,
+            "num_engl": num_engl
         })
 
     accuracy = correct_matches / total_questions if total_questions > 0 else 0
@@ -52,11 +62,11 @@ def evaluate_results(embedder):
 
     return df
 
-if __name__ == "__main__":
 
-    #----------------------------------------------
-    embedder = 2
-    #----------------------------------------------
+if __name__ == "__main__":
+    # ----------------------------------------------
+    embedder = 1
+    # ----------------------------------------------
 
     df = evaluate_results(embedder)
     print(df.head())
