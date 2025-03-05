@@ -69,3 +69,10 @@ def extract_title(text: str) -> str:
     """Extracts the title from a structured text file."""
     match = re.search(r'^---\s*\ntitle:\s*(.+)\s*\n---', text, re.MULTILINE)
     return match.group(1) if match else None
+
+def load_url(embedder):
+    file_path = f"embedder_{embedder}/url.txt"
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"Error: The file '{file_path}' does not exist.")
+    with open(file_path, 'r') as file:
+        return file.read().strip()

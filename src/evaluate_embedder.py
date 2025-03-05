@@ -48,8 +48,8 @@ def evaluate_results(results_file, output_file):
 
 
 if __name__ == "__main__":
-    results_file = "results.json"  # Input file with retrieved results
-    output_file = "evaluation.csv"  # Output CSV file
+    results_file = "embedder_1/results.json"  # Input file with retrieved results
+    output_file = "embedder_1/evaluation.csv"  # Output CSV file
 
     df = evaluate_results(results_file, output_file)
     print(df.head())

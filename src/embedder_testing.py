@@ -3,9 +3,12 @@ import json
 import re
 import random
 from pathlib import Path
+from src.methods import *
 
 # API URL
-EMBEDDER_URL = "https://embedbase-ol.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search"
+first_url= "https://embedbase-ol.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search"
+#EMBEDDER_URL = "https://embedbase.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search"
+
 
 # Headers for the request
 HEADERS = {"Content-Type": "application/json"}
@@ -20,6 +23,7 @@ def extract_title(text: str) -> str:
 # Function to query the embedder API
 def query_embedder(question: str, top_k: int):
     data = {"query": question, "top_k": top_k}
+    EMBEDDER_URL = load_url(embedder)
     response = requests.post(EMBEDDER_URL, headers=HEADERS, json=data, verify=False)
     if response.status_code == 200:
         return response.json()
@@ -71,11 +75,13 @@ def evaluate_embedder(json_file, q, k, d, lang, output_file):
 
 if __name__ == "__main__":
     # Parameters set in code instead of command-line arguments
-    q = 6  # Number of questions per document
+    q = 2  # Number of questions per document
     k = 5  # Number of top retrieved documents
-    d = 100  # Number of documents to test
+    d = 1  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
-    output_file = "results.json"  # Output file for results
+    embedder = 1  # Change this to 2 for embedder_2
+
+    output_file = f"embedder_{embedder}/results_{embedder}.json"  # Output file for results
 
     json_file = "questions_mapping_czech.json" if lang == "czech" else "questions_mapping_english.json"
     evaluate_embedder(json_file, q, k, d, lang, output_file)
