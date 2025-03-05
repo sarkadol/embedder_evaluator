@@ -1,18 +1,24 @@
 import json
 import pandas as pd
-
+import os
 
 # Function to evaluate embedder results
-def evaluate_results(results_file, output_file):
+def evaluate_results(embedder):
+    results_file = f"embedder_{embedder}/results_{embedder}.json"
+    output_file = f"embedder_{embedder}/evaluation_{embedder}.csv"
+
+    if not os.path.exists(results_file):
+        raise FileNotFoundError(f"Error: The results file '{results_file}' does not exist.")
+
     with open(results_file, 'r', encoding='utf-8') as f:
         results = json.load(f)
 
     evaluations = []
     correct_matches = 0
-    total_questions = len(results)
+    total_questions = len(results["evaluations"])
     position_scores = []
 
-    for entry in results:
+    for entry in results["evaluations"]:
         question = entry["question"]
         correct_document = entry["correct_document"]
         retrieved_documents = [doc["title"] for doc in entry["retrieved_documents"]]
@@ -46,10 +52,11 @@ def evaluate_results(results_file, output_file):
 
     return df
 
-
 if __name__ == "__main__":
-    results_file = "embedder_1/results.json"  # Input file with retrieved results
-    output_file = "embedder_1/evaluation.csv"  # Output CSV file
 
-    df = evaluate_results(results_file, output_file)
+    #----------------------------------------------
+    embedder = 2
+    #----------------------------------------------
+
+    df = evaluate_results(embedder)
     print(df.head())

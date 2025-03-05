@@ -5,14 +5,6 @@ import random
 from pathlib import Path
 from src.methods import *
 
-# API URL
-first_url= "https://embedbase-ol.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search"
-#EMBEDDER_URL = "https://embedbase.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search"
-
-
-# Headers for the request
-HEADERS = {"Content-Type": "application/json"}
-
 
 # Function to extract title using regex
 def extract_title(text: str) -> str:
@@ -21,10 +13,10 @@ def extract_title(text: str) -> str:
 
 
 # Function to query the embedder API
-def query_embedder(question: str, top_k: int):
+def query_embedder(question: str, top_k: int, embedder_url: str):
     data = {"query": question, "top_k": top_k}
-    EMBEDDER_URL = load_url(embedder)
-    response = requests.post(EMBEDDER_URL, headers=HEADERS, json=data, verify=False)
+    HEADERS = {"Content-Type": "application/json"}
+    response = requests.post(embedder_url, headers=HEADERS, json=data, verify=False)
     if response.status_code == 200:
         return response.json()
     else:
@@ -33,18 +25,20 @@ def query_embedder(question: str, top_k: int):
 
 
 # Function to evaluate the embedder
-def evaluate_embedder(json_file, q, k, d, lang, output_file):
+def evaluate_embedder(json_file, q, k, d, lang, embedder, output_file):
+    embedder_url = load_url(embedder)
+
     with open(json_file, 'r', encoding='utf-8') as f:
         questions_mapping = json.load(f)
 
-    results = []
+    results = {"embedder_url": embedder_url, "evaluations": []}
     selected_docs = random.sample(list(questions_mapping.keys()), min(d, len(questions_mapping)))
 
     for doc_title in selected_docs:
         questions = random.sample(questions_mapping[doc_title], min(q, len(questions_mapping[doc_title])))
 
         for question in questions:
-            response_data = query_embedder(question, k)
+            response_data = query_embedder(question, k, embedder_url)
             if not response_data or "similarities" not in response_data:
                 print(f"No valid response for question: {question}")
                 continue
@@ -61,7 +55,7 @@ def evaluate_embedder(json_file, q, k, d, lang, output_file):
                 else:
                     print(f"Warning: No title extracted from response data: {similarity.get('data', '')}")
 
-            results.append({
+            results["evaluations"].append({
                 "question": question,
                 "correct_document": doc_title,
                 "retrieved_documents": retrieved_docs
@@ -74,14 +68,15 @@ def evaluate_embedder(json_file, q, k, d, lang, output_file):
 
 
 if __name__ == "__main__":
-    # Parameters set in code instead of command-line arguments
-    q = 2  # Number of questions per document
+    # ----------------------------------------------
+    q = 5  # Number of questions per document
     k = 5  # Number of top retrieved documents
-    d = 1  # Number of documents to test
+    d = 10  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
-    embedder = 1  # Change this to 2 for embedder_2
+    embedder = 2  # Change this to 2 for embedder_2
+    # ----------------------------------------------
 
     output_file = f"embedder_{embedder}/results_{embedder}.json"  # Output file for results
 
     json_file = "questions_mapping_czech.json" if lang == "czech" else "questions_mapping_english.json"
-    evaluate_embedder(json_file, q, k, d, lang, output_file)
+    evaluate_embedder(json_file, q, k, d, lang, embedder, output_file)
