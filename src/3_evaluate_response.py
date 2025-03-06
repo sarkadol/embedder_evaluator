@@ -68,8 +68,8 @@ if __name__ == "__main__":
 
     # ----------------------------------------------
     embedder = 2  # Select embedder
-    language = "czech"  # Choose "english" or "czech"
-    number = 2  # number of the generation response
+    language = "english"  # Choose "english" or "czech"
+    number = 1  # number of the generation response
     # ----------------------------------------------
 
     df = evaluate_results(embedder, language,number)

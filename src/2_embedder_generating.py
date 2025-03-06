@@ -75,9 +75,9 @@ if __name__ == "__main__":
     q = 5  # Number of questions per document
     k = 5  # Number of top retrieved documents
     d = 100  # Number of documents to test
-    lang = "czech"  # Language of the questions ("czech" or "english")
+    lang = "english"  # Language of the questions ("czech" or "english")
     embedder = 2  # Change this to 2 for embedder_2
-    number = 2 #number of the generation response
+    number = 1 #number of the generation response
     # ----------------------------------------------
 
     output_file = f"embedder_{embedder}/results_{lang}_{embedder}_{number}.json"  # Output file for results

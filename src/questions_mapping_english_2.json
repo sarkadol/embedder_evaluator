@@ -1,0 +1,782 @@
+{
+    "News": {
+        "questions": [
+            "What are the three ways to use the Better Docs AI Assistant?",
+            "Where can I find more information about the new AI chat website and API?",
+            "How can I access AlphaFold 3 on Foldify?",
+            "What is required to use the Problem Solving mode of the Better Docs AI Assistant?",
+            "How can MetaCentrum users register for a license agreement to use AlphaFold 3?"
+        ],
+        "metadata": {
+            "title": "News",
+            "lang": "en"
+        }
+    },
+    "How to Run NGINX Web Server": {
+        "questions": [
+            "What are some potential reasons for a failed NGINX deployment on Kubernetes?",
+            "How can you run an unprivileged NGINX image on this Kubernetes platform?",
+            "What is the correct user ID and group ID for the `nginx-unprivileged` image?",
+            "How do you add persistent storage to the NGINX deployment?",
+            "What manifests are needed to expose the NGINX server to the internet?"
+        ],
+        "metadata": {
+            "title": "How to Run NGINX Web Server",
+            "lang": "en"
+        }
+    },
+    "Use case Omero": {
+        "questions": [
+            "What are the two main components needed to run the Omero application in Kubernetes?",
+            "Why is the second option of running Omero images manually preferred for Kubernetes over using docker-compose?",
+            "How can you create and deploy a secret for the Postgres database user and password in Kubernetes?",
+            "What steps are necessary to ensure that the Omero server application can run in a managed Kubernetes environment?",
+            "How can you deploy the Omero web interface to make it accessible from the internet?"
+        ],
+        "metadata": {
+            "title": "Use case Omero",
+            "lang": "en"
+        }
+    },
+    "Running Virtual Machine": {
+        "questions": [
+            "What are the prerequisites for running a virtual machine using this documentation?",
+            "How can you generate an SSH key on Linux or MacOS according to the documentation?",
+            "Which Docker images are recommended for use in this documentation?",
+            "How can you ensure data persistence across container restarts according to this documentation?",
+            "What is the procedure for installing CUDA using the described method?"
+        ],
+        "metadata": {
+            "title": "Running Virtual Machine",
+            "lang": "en"
+        }
+    },
+    "Add shell to an image without one": {
+        "questions": [
+            "How can I add a shell to an existing Docker image that doesn't have one?",
+            "What are the prerequisites for adding a shell to an image?",
+            "Where can I download the `add_shell.sh` script needed to add a shell to an image?",
+            "How do I specify a user ID when adding a shell to an image if the image user is not root?",
+            "What should I do if I want to use the modified image with a shell in a Kubernetes environment?"
+        ],
+        "metadata": {
+            "title": "Add shell to an image without one",
+            "lang": "en"
+        }
+    },
+    "FAQ": {
+        "questions": [
+            "What should be included in the resource section to avoid deployment failure due to missing resources?",
+            "How can I resolve an error indicating that my Pod's memory request exceeds the available quota?",
+            "What should I do if `nvidia-smi` returns \"command not found\" due to missing GPU requests?",
+            "How can I fix a CreateContainerConfigError related to a container running as root?",
+            "What steps should I take to address a PodSecurity violation error related to privilege escalation and user permissions?"
+        ],
+        "metadata": {
+            "title": "FAQ",
+            "lang": "en"
+        }
+    },
+    "Dockerfile": {
+        "questions": [
+            "What is the purpose of a Docker image in container infrastructure?",
+            "How can you specify a base image in a Dockerfile?",
+            "What are the benefits of using the `&&` operator when chaining commands in a Dockerfile?",
+            "Why is it recommended to search for existing images in a public registry before creating your own Docker image?",
+            "What is the significance of the `--rm` option when running a Docker image?"
+        ],
+        "metadata": {
+            "title": "Dockerfile",
+            "lang": "en"
+        }
+    },
+    "Harbor (hub.cerit.io)": {
+        "questions": [
+            "How can users access the Harbor docker registry and what credentials are required for command line login?",
+            "What storage limits are imposed on personal projects in Harbor, and how can users manage their storage usage?",
+            "How can a user push a Docker image to the Harbor registry and what example command should be used?",
+            "What precautions should users take when storing Docker images on Harbor in relation to Kubernetes access?",
+            "How can users check for vulnerabilities in their Docker images on Harbor and what steps can be taken to address them?"
+        ],
+        "metadata": {
+            "title": "Harbor (hub.cerit.io)",
+            "lang": "en"
+        }
+    },
+    "Limitations of Running Docker Images": {
+        "questions": [
+            "What happens if you try to run a docker image without specifying a numeric UID?",
+            "How can you allow a service to listen on ports below 1024 from outside the container?",
+            "What is a consequence of not having root access in a running container?",
+            "How can you work around the limitation of not being able to write to `/var/log/`?",
+            "Why is using `fakeroot` and changing ownership during the docker build process considered an anti-pattern?"
+        ],
+        "metadata": {
+            "title": "Limitations of Running Docker Images",
+            "lang": "en"
+        }
+    },
+    "Hello world tutorial": {
+        "questions": [
+            "What is the purpose of the \"Hello world tutorial\" document?",
+            "How can you create a Kubernetes Deployment to run a custom webserver using `kubectl`?",
+            "What steps are necessary to expose a Kubernetes application as a network service?",
+            "What are the requirements for naming a DNS in the Ingress configuration?",
+            "How can you check the status of deployed Kubernetes resources using `kubectl`?"
+        ],
+        "metadata": {
+            "title": "Hello world tutorial",
+            "lang": "en"
+        }
+    },
+    "GitLab Kubernetes Agent": {
+        "questions": [
+            "What are the prerequisites for installing the GitLab Kubernetes Agent?",
+            "How do you define a configuration repository for the GitLab Kubernetes Agent?",
+            "Where can you find the agent token during the installation process?",
+            "What command is used to create a secret with the agent token?",
+            "How can you check if the GitLab Kubernetes Agent is running?"
+        ],
+        "metadata": {
+            "title": "GitLab Kubernetes Agent",
+            "lang": "en"
+        }
+    },
+    "Building Docker containers with Gitlab": {
+        "questions": [
+            "What are the prerequisites needed to build Docker containers with GitLab?",
+            "How can you set up a CI/CD pipeline in GitLab to build Docker images?",
+            "What is the role of the `$CI_REGISTRY` variable in the GitLab CI/CD pipeline configuration?",
+            "How can you use Docker images from the GitLab Container Registry if the project is public?",
+            "What steps are necessary to upload a Docker image to a custom container registry in GitLab?"
+        ],
+        "metadata": {
+            "title": "Building Docker containers with Gitlab",
+            "lang": "en"
+        }
+    },
+    "Storing Kubernetes Secrets in Git": {
+        "questions": [
+            "How can Kubernetes Secrets be stored securely in a git repository?",
+            "What are the prerequisites for storing Kubernetes Secrets using the method described?",
+            "How can you transform a Kubernetes Secret into a Sealed Secret?",
+            "What does the `kubeseal` command do?",
+            "How does the encryption process ensure that a Sealed Secret can only be installed in its intended namespace?"
+        ],
+        "metadata": {
+            "title": "Storing Kubernetes Secrets in Git",
+            "lang": "en"
+        }
+    },
+    "GitLab Runner in Kubernetes": {
+        "questions": [
+            "What are the prerequisites for setting up a GitLab Runner in a Kubernetes cluster?",
+            "How can you securely store GitLab tokens when setting up the GitLab Runner?",
+            "What should you do if the GitLab Runner pod is in an `ImagePullBackOff` state?",
+            "How do you start a GitLab Runner using Helm after configuring the `values.yaml` file?",
+            "What steps are necessary to upgrade the GitLab Runner to a new version?"
+        ],
+        "metadata": {
+            "title": "GitLab Runner in Kubernetes",
+            "lang": "en"
+        }
+    },
+    "Certificate": {
+        "questions": [
+            "What is the purpose of the ACME protocol in Kubernetes certificate management?",
+            "How is the `letsencrypt-prod-dns` issuer different from the `letsencrypt-prod` issuer?",
+            "What type of applications is the `letsencrypt-stage-dns` issuer suitable for?",
+            "How can a Kubernetes managed certificate be issued using a YAML configuration?",
+            "What information does the `spec.dnsNames` field contain in the certificate configuration?"
+        ],
+        "metadata": {
+            "title": "Certificate",
+            "lang": "en"
+        }
+    },
+    "Exposing Applications": {
+        "questions": [
+            "How should a web-based application be exposed to the Internet according to this documentation?",
+            "What are the differences in IP address requirements between web-based applications and other applications?",
+            "What are the steps to enable TLS for a web-based application using Ingress?",
+            "How can you restrict access to a Kubernetes application to specific IP ranges?",
+            "What should you do if a TLS certificate is not issued due to resource quotas?"
+        ],
+        "metadata": {
+            "title": "Exposing Applications",
+            "lang": "en"
+        }
+    },
+    "Jobs": {
+        "questions": [
+            "What should be changed in the sample configuration before using it for a job in the cluster?",
+            "What are the possible values for the restart policy in a Kubernetes job, and where can I find more information about them?",
+            "How can I define resource requests and limits for CPU and memory in a job configuration?",
+            "Where should I specify the security context for a container in a Kubernetes job?",
+            "What is the significance of using labels in Kubernetes jobs and pods?"
+        ],
+        "metadata": {
+            "title": "Jobs",
+            "lang": "en"
+        }
+    },
+    "Kubectl": {
+        "questions": [
+            "What is required after installing Kubectl to make it function?",
+            "Where can the `kube config` file be found?",
+            "What should be done if the `$HOME/.kube/config` file does not exist?",
+            "How can you change the permissions of the `$HOME/.kube/config` file?",
+            "Is it possible to have multiple cluster configurations in one config file?"
+        ],
+        "metadata": {
+            "title": "Kubectl",
+            "lang": "en"
+        }
+    },
+    "Namespaces": {
+        "questions": [
+            "What is the purpose of namespaces in Kubernetes?",
+            "Why is it not recommended to create namespaces using kubectl in Rancher?",
+            "How can a user create a new namespace in the Rancher GUI?",
+            "What should a user do if they don't see their Personal Project or Namespace after logging into Rancher GUI?",
+            "Where can users check their namespaces in the Rancher interface?"
+        ],
+        "metadata": {
+            "title": "Namespaces",
+            "lang": "en"
+        }
+    },
+    "Storage": {
+        "questions": [
+            "What are the three important Kubernetes objects related to storage?",
+            "How can a user create an ad-hoc PVC using the provided template?",
+            "What are the performance characteristics of the different storage classes mentioned in the table?",
+            "What steps are involved in accessing a WebDAV storage using a PVC?",
+            "How is ephemeral storage allocated and what happens to it if a Pod is evicted or moved?"
+        ],
+        "metadata": {
+            "title": "Storage",
+            "lang": "en"
+        }
+    },
+    "GPU and other Resources": {
+        "questions": [
+            "What are the two types of resource limits discussed in the documentation?",
+            "How can you increase the shared memory size for a container?",
+            "What is the format for requesting fractional GPU resources?",
+            "How can you request a specific type of GPU when deploying a Pod?",
+            "What is the purpose of specifying the `ephemeral-storage` resource?"
+        ],
+        "metadata": {
+            "title": "GPU and other Resources",
+            "lang": "en"
+        }
+    },
+    "Security and Network Policy": {
+        "questions": [
+            "What are the security flaws of using basic auth or oauth at ingress?",
+            "How can the security flaw of ingress authentication be mitigated?",
+            "What is required to utilize e-infra's SSO service for securing an application?",
+            "What changes need to be made to the existing ingress to include SSO?",
+            "How should the SSO endpoint be configured and applied?"
+        ],
+        "metadata": {
+            "title": "Security and Network Policy",
+            "lang": "en"
+        }
+    },
+    "Security Context": {
+        "questions": [
+            "What is the difference between PSP and PSA in terms of security policy enforcement?",
+            "What are the important new options for the Pod security context mentioned in the documentation?",
+            "How does the Container security context differ from the Pod security context in a Kubernetes deployment?",
+            "Why is it important to add `fsGroupChangePolicy: OnRootMismatch` to the security context?",
+            "What action should users take if they are running a CERIT-SC application from the Rancher?"
+        ],
+        "metadata": {
+            "title": "Security Context",
+            "lang": "en"
+        }
+    },
+    "Wireguard": {
+        "questions": [
+            "What steps are involved in creating a Kubernetes Secret for a WireGuard private key?",
+            "How can you deploy a Pod with a WireGuard interface in Kubernetes?",
+            "What are the current limitations when configuring WireGuard in Kubernetes?",
+            "How can you verify the existence of the WireGuard interface in a Pod?",
+            "What command is used to test connectivity to a WireGuard peer from a Pod?"
+        ],
+        "metadata": {
+            "title": "Wireguard",
+            "lang": "en"
+        }
+    },
+    "Logging": {
+        "questions": [
+            "What is the role of the Logging operator in a Kubernetes cluster?",
+            "How can you specify which logs should be sent to the output destination using SyslogNGFlow?",
+            "What is the importance of the loggingRef field in both SyslogNGFlow and SyslogNGOutput configurations?",
+            "How do you configure the output destination for logs in a Kubernetes cluster using SyslogNGOutput?",
+            "What command is used to apply the resource configurations for creating a new logging pipeline?"
+        ],
+        "metadata": {
+            "title": "Logging",
+            "lang": "en"
+        }
+    },
+    "MinIO Operator": {
+        "questions": [
+            "What is the purpose of the MinIO Operator in Kubernetes?",
+            "How can you deploy a single instance of a MinIO Tenant using the MinIO Operator?",
+            "What is the significance of the 'volumeClaimTemplate' in the MinIO Tenant YAML configuration?",
+            "How can you access the MinIO S3 storage from other Pods within a Kubernetes cluster?",
+            "What steps can be taken to enhance network security for the MinIO S3 storage in a Kubernetes environment?"
+        ],
+        "metadata": {
+            "title": "MinIO Operator",
+            "lang": "en"
+        }
+    },
+    "MPI Operator": {
+        "questions": [
+            "What is the role of the MPI Operator in running MPI jobs on Kubernetes?",
+            "How can a user find the full documentation for the Kubernetes kind `MPIJob`?",
+            "What are the key requirements for preparing a Docker image to run an MPIJob?",
+            "Why is it necessary to match the `sshAuthMountPath` user with the user created in the Docker image?",
+            "How do you execute an MPI Job once the Docker image and manifest are ready?"
+        ],
+        "metadata": {
+            "title": "MPI Operator",
+            "lang": "en"
+        }
+    },
+    "Operator Summary": {
+        "questions": [
+            "What is the Operator pattern and what tasks does it automate?",
+            "Where can I find more information about the Operator pattern?",
+            "Why is deploying an Operator with namespaced deployment discouraged?",
+            "What should a user do if they want to use an Operator but lack the necessary cluster administrator privileges?",
+            "What are Custom Resources and how are they related to Operators?"
+        ],
+        "metadata": {
+            "title": "Operator Summary",
+            "lang": "en"
+        }
+    },
+    "Postgres Operator Cloudnative-PG": {
+        "questions": [
+            "How can I deploy a minimal PostgreSQL cluster using the Postgres Operator on Kubernetes?",
+            "What are the steps to access the database from outside the Kubernetes cluster?",
+            "How can I set up a high-availability PostgreSQL cluster using the Postgres Operator?",
+            "What configuration is needed to use custom database credentials in a PostgreSQL deployment?",
+            "How can I enable automatic backups of my PostgreSQL database to S3 storage?"
+        ],
+        "metadata": {
+            "title": "Postgres Operator Cloudnative-PG",
+            "lang": "en"
+        }
+    },
+    "Spark Operator": {
+        "questions": [
+            "What is the purpose of the Spark Operator?",
+            "How can you avoid permission issues when configuring a Spark application?",
+            "What should be used instead of 'hostPath' as a volume source in the cluster?",
+            "How can you access the Spark UI for your applications?",
+            "What should you do if you want to use a custom certificate issuer for SparkUI Ingress?"
+        ],
+        "metadata": {
+            "title": "Spark Operator",
+            "lang": "en"
+        }
+    },
+    "Storage Secrets": {
+        "questions": [
+            "What are the two types of objects you can create for accessing storage in MetaCentrum?",
+            "What are the prerequisites for using the storage secrets service?",
+            "How long might it take for your kerberos name to be associated with your Rancher account?",
+            "Where can you manage and view the generated secrets after creation?",
+            "What is one example of how the Samba secret can be used?"
+        ],
+        "metadata": {
+            "title": "Storage Secrets",
+            "lang": "en"
+        }
+    },
+    "VPN": {
+        "questions": [
+            "What steps are required to connect to Secure VPN on Windows?",
+            "How do you create a configuration file for Secure VPN on a Linux based OS?",
+            "What command is used to activate the VPN tunnel on Linux?",
+            "Where should the configuration file be stored on Windows?",
+            "How can you deactivate the VPN tunnel on Linux?"
+        ],
+        "metadata": {
+            "title": "VPN",
+            "lang": "en"
+        }
+    },
+    "How to get Access": {
+        "questions": [
+            "Who is eligible for free access to the CERIT-SC Kubernetes platform and Rancher UI?",
+            "What should users do if they want to use the infrastructure for commercial research?",
+            "When does a user account expire and what happens if it is not prolonged?",
+            "What is the required acknowledgement formula for publications created with the support of MetaCentrum, CERIT-SC, and/or Elixir CZ?",
+            "How can a user apply for a MetaCentrum account for the first time?"
+        ],
+        "metadata": {
+            "title": "How to get Access",
+            "lang": "en"
+        }
+    },
+    "Contacts": {
+        "questions": [
+            "How can I contact the support team for issues related to Kubernetes services?",
+            "What is the email address to reach CERIT-SC for general inquiries?",
+            "Where is the Center CERIT-SC located?",
+            "What services does CERIT-SC provide support for?",
+            "Who are the three e-infrastructures that constitute the national e-INFRA CZ research infrastructure?"
+        ],
+        "metadata": {
+            "title": "Contacts",
+            "lang": "en"
+        }
+    },
+    "Available Hardware": {
+        "questions": [
+            "What GPUs are available in the kuba-cluster?",
+            "How many nodes does the kubh-cluster consist of, and where are they located?",
+            "What is the total storage capacity offered by the secure cluster's primary network storage?",
+            "Are the storage and data backup features the same across all clusters?",
+            "Which nodes in the secure cluster are capable of creating a high-availability (HA) setup?"
+        ],
+        "metadata": {
+            "title": "Available Hardware",
+            "lang": "en"
+        }
+    },
+    "Welcome to the CERIT-SC Kubernetes Container Platform": {
+        "questions": [
+            "What is the underlying orchestrator used in the CERIT-SC Kubernetes Container Platform?",
+            "How can users access the CERIT-SC Kubernetes Container Platform?",
+            "What types of networking technology does the platform support?",
+            "What examples of applications or workflows are mentioned in the platform's documentation?",
+            "What options are available for deploying applications on the platform?"
+        ],
+        "metadata": {
+            "title": "Welcome to the CERIT-SC Kubernetes Container Platform",
+            "lang": "en"
+        }
+    },
+    "Projects, Namespaces, and Quotas": {
+        "questions": [
+            "What are the default CPU and Memory quotas for a Personal Project and default Namespace?",
+            "How can a user request a new project with larger quotas?",
+            "What are the two options if a user needs more resources than the Personal Project quotas allow?",
+            "What is the recommended method for creating a new Namespace to ensure it appears in the Rancher UI?",
+            "What happens if a running container exceeds its CPU or Memory limits?"
+        ],
+        "metadata": {
+            "title": "Projects, Namespaces, and Quotas",
+            "lang": "en"
+        }
+    },
+    "Rancher": {
+        "questions": [
+            "What are the login options available for accessing the Rancher instance?",
+            "How is the organizational structure of Rancher and Kubernetes described?",
+            "What is the recommended way to create additional namespaces in Rancher?",
+            "What is provided to each user upon their first login to the Rancher dashboard?",
+            "Where can a user find the list of assigned clusters they have access to in Rancher?"
+        ],
+        "metadata": {
+            "title": "Rancher",
+            "lang": "en"
+        }
+    },
+    "Requesting a Project, Access Control": {
+        "questions": [
+            "What are the two types of projects differentiated in a Kubernetes cluster?",
+            "How can someone who is not a member of MetaCentrum register to access projects in Rancher?",
+            "What information is required when requesting a group project via email?",
+            "What steps should be followed by an administrator to assign a group in CESNET Perun for access control?",
+            "Who is responsible for assigning access control to a group project in Rancher?"
+        ],
+        "metadata": {
+            "title": "Requesting a Project, Access Control",
+            "lang": "en"
+        }
+    },
+    "Ansys": {
+        "questions": [
+            "What should you do if the installation of Ansys appears to fail after not selecting 'Customize Helm options before installing'?",
+            "How can you preserve the home directory contents when reinstalling the Ansys application?",
+            "What should you do if you need more than the default quota limit for CPUs when running Ansys?",
+            "What are the two methods of access display available when installing the Ansys application?",
+            "How can you connect to a running Ansys instance using the WEBRTC method?"
+        ],
+        "metadata": {
+            "title": "Ansys",
+            "lang": "en"
+        }
+    },
+    "Desktop": {
+        "questions": [
+            "How can I preserve the contents of the home directory when reinstalling the desktop application?",
+            "What is the limit for guaranteed CPUs in the default project, and what should I do if I need more?",
+            "Which display protocols are available for the desktop application, and what are the differences between them?",
+            "How can I connect e-infra storage to the application and what credentials are required?",
+            "What happens if the application exceeds the maximum CPU or RAM resources?"
+        ],
+        "metadata": {
+            "title": "Desktop",
+            "lang": "en"
+        }
+    },
+    "Matlab": {
+        "questions": [
+            "How can you ensure that the content of the home directory is preserved when reinstalling the Matlab application?",
+            "What should you do if you need more than the default number of guaranteed CPUs for Matlab?",
+            "How can you mount your MetaCentrum home in Matlab version v9.11.1 and above without a password?",
+            "What are the two display methods available for accessing Matlab, and what are their differences?",
+            "What steps should you follow to delete a running Matlab instance while preserving the home directory data?"
+        ],
+        "metadata": {
+            "title": "Matlab",
+            "lang": "en"
+        }
+    },
+    "Minio": {
+        "questions": [
+            "What is the prerequisite for a Minio server to access data from an application pod?",
+            "How can data be transferred to another application using the Minio server?",
+            "What should you do if you see `cm-acme-http-solver...` in the `Ingresses` section after installing the Minio application?",
+            "How do you set the Minio username and password during installation?",
+            "What happens to the data in the home directory if you delete a running Minio instance?"
+        ],
+        "metadata": {
+            "title": "Minio",
+            "lang": "en"
+        }
+    },
+    "Moodle": {
+        "questions": [
+            "How do you log in to the Rancher portal before installing Moodle?",
+            "What steps do you follow to select the Moodle application from the catalog?",
+            "What information is required to customize the General section during Moodle installation?",
+            "How can you configure the database for Moodle if you want to use an existing external database?",
+            "What actions should you take to delete a running instance of the Moodle application?"
+        ],
+        "metadata": {
+            "title": "Moodle",
+            "lang": "en"
+        }
+    },
+    "ownCloud": {
+        "questions": [
+            "How can you run the ownCloud client application to sync data between a pod and an ownCloud server?",
+            "What is a prerequisite for the ownCloud client to sync data into a pod?",
+            "How do you check that a remote file system is connected to your home directory in the pod?",
+            "What steps should you follow to install the ownCloud application through the Rancher interface?",
+            "How can you delete a running instance of the ownCloud application while preserving data in the home directory?"
+        ],
+        "metadata": {
+            "title": "ownCloud",
+            "lang": "en"
+        }
+    },
+    "phpMyAdmin": {
+        "questions": [
+            "How can I install the phpMyAdmin application using Rancher?",
+            "What steps are involved in selecting the application to run in Rancher?",
+            "How do I customize the phpMyAdmin application during installation?",
+            "What credentials are needed to log into the phpMyAdmin application?",
+            "How can I uninstall the phpMyAdmin application through Rancher?"
+        ],
+        "metadata": {
+            "title": "phpMyAdmin",
+            "lang": "en"
+        }
+    },
+    "Personal Monitoring": {
+        "questions": [
+            "What is the purpose of the Personal Monitoring application?",
+            "How do you start the installation of the Personal Monitoring application?",
+            "Can you change the deployed chart name during the installation process?",
+            "Where can you access your personal Grafana instance?",
+            "What should you do after being redirected to your Grafana instance?"
+        ],
+        "metadata": {
+            "title": "Personal Monitoring",
+            "lang": "en"
+        }
+    },
+    "Rancher Applications": {
+        "questions": [
+            "What are the CPU quota limits for the default project when selecting applications in Rancher?",
+            "What should you do if you need more than the default CPU quota limits?",
+            "What might happen if you do not select the 'Customize Helm options before install' during application installation?",
+            "Which section of the Rancher interface should you navigate to in order to select an application to run?",
+            "How can you limit charts to only display those related to 'cerit-sc' when selecting an application?"
+        ],
+        "metadata": {
+            "title": "Rancher Applications",
+            "lang": "en"
+        }
+    },
+    "RStudio": {
+        "questions": [
+            "What is the recommended method for running RStudio and why?",
+            "How can you preserve the content of the home directory when reinstalling the RStudio application?",
+            "What should you do if you need more than the default quota limit for CPUs in the Rancher RStudio setup?",
+            "What steps are necessary to install additional packages using conda or mamba in RStudio?",
+            "How can you configure RStudio to install packages when running in the Sensitive Cloud without direct internet access?"
+        ],
+        "metadata": {
+            "title": "RStudio",
+            "lang": "en"
+        }
+    },
+    "Samba Server": {
+        "questions": [
+            "What prerequisites are necessary before installing the Samba server?",
+            "How do you select the namespace when installing Samba in the Rancher GUI?",
+            "What is the format of the final URL for accessing the Samba server?",
+            "What steps are required to connect to a Samba network drive on a Windows machine?",
+            "How can you access the Samba network drive from outside the MUNI network?"
+        ],
+        "metadata": {
+            "title": "Samba Server",
+            "lang": "en"
+        }
+    },
+    "Scipion": {
+        "questions": [
+            "What are the quota limits for CPUs when running Scipion and how can they be adjusted?",
+            "What is the importance of selecting the `Customize Helm options before install` during the installation process?",
+            "What should be filled in as the first item on the Scipion application installation form?",
+            "How does the synchronization process work between the Onedata spaces and Kubernetes volumes?",
+            "What happens to data stored outside the Onedata mounts when the Scipion application is deleted?"
+        ],
+        "metadata": {
+            "title": "Scipion",
+            "lang": "en"
+        }
+    },
+    "ShinySOM": {
+        "questions": [
+            "What steps are involved in installing the ShinySOM application?",
+            "How can you preserve the content of the home directory when deleting and reinstalling the ShinySOM application?",
+            "What should you avoid using in the access password for ShinySOM?",
+            "What happens if the ShinySOM application exceeds the maximum CPU or RAM resources?",
+            "How do you access the running instance of ShinySOM after installation?"
+        ],
+        "metadata": {
+            "title": "ShinySOM",
+            "lang": "en"
+        }
+    },
+    "BinderHub": {
+        "questions": [
+            "How do I authenticate to use the CERIT-SC BinderHub instance?",
+            "What is the path for the persistent volume where I should save data for reuse across different BinderHub instances?",
+            "What are the default resource limits for memory and CPU when using BinderHub?",
+            "How can I customize the Docker image used for my BinderHub notebook instances?",
+            "What should I do if I encounter an unknown error while trying to spawn a notebook in BinderHub?"
+        ],
+        "metadata": {
+            "title": "BinderHub",
+            "lang": "en"
+        }
+    },
+    "Chat AI": {
+        "questions": [
+            "How can a user access the Open-WebUI platform?",
+            "What are the steps to log in to Open-WebUI using e-INFRA CZ?",
+            "Which AI models are currently available in Open-WebUI for text generation?",
+            "How can a user generate images using the Open-WebUI interface?",
+            "What is the process for creating an API key in Open-WebUI?"
+        ],
+        "metadata": {
+            "title": "Chat AI",
+            "lang": "en"
+        }
+    },
+    "Foldify": {
+        "questions": [
+            "How can you access AlphaFold3 software through Foldify?",
+            "What are the main sections available on the Foldify Dashboard after logging in?",
+            "How can you run a new computation using Foldify?",
+            "What options are available for viewing computed results on Foldify?",
+            "What is the purpose of the Plddt score in the results page of Foldify?"
+        ],
+        "metadata": {
+            "title": "Foldify",
+            "lang": "en"
+        }
+    },
+    "JupyterHub": {
+        "questions": [
+            "What is JupyterHub and what are its primary use cases?",
+            "How can a user access JupyterHub on the hub.cloud.e-infra.cz platform?",
+            "What are the steps to start a custom JupyterLab environment with a personalized name?",
+            "What are the available pre-configured Docker images provided by JupyterHub, and what are they optimized for?",
+            "What should a user do if they want to share a Jupyter notebook with another user or access it from a different browser session?"
+        ],
+        "metadata": {
+            "title": "JupyterHub",
+            "lang": "en"
+        }
+    },
+    "NBGrader Docs": {
+        "questions": [
+            "What is the primary instance URL for accessing jupytul?",
+            "How can a student resolve the issue of not seeing the correct course upon logging in?",
+            "What steps must be taken to add a student to a course in NBGrader Tulhub?",
+            "What should instructors do if they have been added to a course as an instructor after previously accessing jupytul?",
+            "How many different notebook servers can a student create, and why might this be useful?"
+        ],
+        "metadata": {
+            "title": "NBGrader Docs",
+            "lang": "en"
+        }
+    },
+    "Running Nextflow Pipelines in Kubernetes": {
+        "questions": [
+            "How do you install Nextflow on your local computer for running pipelines in a Kubernetes cluster?",
+            "What are the necessary configurations required in the `nextflow.config` file to run a Nextflow pipeline in Kubernetes?",
+            "What command should you use to start a Nextflow pipeline in a Kubernetes environment?",
+            "How can you debug a Nextflow pipeline running in Kubernetes if you encounter issues?",
+            "What are the specific requirements for running the nf-core/sarek pipeline on Kubernetes?"
+        ],
+        "metadata": {
+            "title": "Running Nextflow Pipelines in Kubernetes",
+            "lang": "en"
+        }
+    },
+    "Snakemake": {
+        "questions": [
+            "What is Snakemake?",
+            "Where can I find detailed documentation about Snakemake?",
+            "Is there information available on how to use Snakemake?",
+            "Where is the Snakemake title section located in the documentation?",
+            "Is the documentation for Snakemake complete or still to be determined?"
+        ],
+        "metadata": {
+            "title": "Snakemake",
+            "lang": "en"
+        }
+    },
+    "TES/WES": {
+        "questions": [
+            "What is TESK and where can I find its implementation?",
+            "What is the purpose of the WES microservice?",
+            "Where can I access the TESK endpoint in the Czech infrastructure?",
+            "Where can I find the endpoint for WES in the Czech infrastructure?",
+            "How does WES interact with TES-compatible execution backends?"
+        ],
+        "metadata": {
+            "title": "TES/WES",
+            "lang": "en"
+        }
+    }
+}
