@@ -23,9 +23,17 @@ for file in csv_files:
 
     accuracy_results.append((filename, accuracy, correct_matches, total_questions))
 
+# Convert results to a DataFrame
+accuracy_df = pd.DataFrame(accuracy_results, columns=["Filename", "Accuracy", "Correct Matches", "Total Questions"])
+
+# Save to CSV
+accuracy_df.to_csv("all_accuracy_results.csv", index=False)
+
 # Determine max length for formatting
 max_filename_length = max(len(item[0]) for item in accuracy_results)
 
 # Print results with alignment
 for filename, accuracy, correct_matches, total_questions in sorted(accuracy_results):
     print(f"{filename.ljust(max_filename_length)}: Accuracy: {accuracy:6.2%} ({correct_matches}/{total_questions})")
+
+print("\nResults saved to 'all_accuracy_results.csv'.")

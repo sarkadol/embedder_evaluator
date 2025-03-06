@@ -100,7 +100,7 @@ def generate_questions(model_id, text, num_questions, language):
     return []
 
 
-def process_mdx_files(language, max_files, num_questions, model_id):
+def process_mdx_files(language, max_files, num_questions, model_id,number):
     """Read MDX files in the chosen language, generate questions, and save them in JSON format."""
     models = get_available_models()
     if not models:
@@ -121,7 +121,7 @@ def process_mdx_files(language, max_files, num_questions, model_id):
             "metadata": data["metadata"]
         }
 
-    output_file = f"questions_mapping_{language}.json"
+    output_file = f"questions_mapping_{language}_{number}.json"
     with open(output_file, "w", encoding="utf-8") as json_file:
         json.dump(questions_data, json_file, indent=4, ensure_ascii=False)
     print(f"Questions saved to {output_file}")
@@ -135,10 +135,11 @@ if __name__ == "__main__":
     max_files = 100  # Set the maximum number of files to process
     num_questions = 5  # Number of questions per document
     model_id = "gpt-4o"  # Set the model ID
+    number = 1 # number of the generation response (pokus č.X)
     # ----------------------------------------------
 
     if language not in ["english", "czech"]:
         print("Invalid choice. Defaulting to English.")
         language = "english"
 
-    process_mdx_files(language, max_files, num_questions, model_id)
+    process_mdx_files(language, max_files, num_questions, model_id,number)

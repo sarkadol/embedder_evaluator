@@ -4,8 +4,8 @@ from src.utils import *
 
 #----------------------------------------------
 embedder = 1  # Change this to 2 for embedder_2
-top_k = 2
-use_ssh = True
+top_k = 5
+use_ssh = False
 #----------------------------------------------
 
 # Load the URL from the text file
@@ -39,7 +39,7 @@ except json.JSONDecodeError as e:
     print(f"Status Code: {response.status_code}")
     #print(f"Response Text: {response.text}")
 
-if(False):
+if(True):
     if (False): #see full api
         print("\n--- Full API Response ---")
         print(json.dumps(response_data, indent=4))
