@@ -1,5 +1,5 @@
 #contact_chatbot.py
-from src.methods import *
+from src.utils import *
 
 if __name__ == "__main__":
     # Fetch available models
