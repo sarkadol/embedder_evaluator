@@ -7,3 +7,7 @@ embedder_2/evaluation_czech_2_1.csv,0.9345454545454546,257,275
 embedder_2/evaluation_czech_2_2.csv,0.9127272727272727,251,275
 embedder_2/evaluation_english_2_1.csv,0.9666666666666667,290,300
 embedder_2/evaluation_english_2_2.csv,0.9533333333333334,286,300
+embedder_3/evaluation_czech_3_1.csv,0.9563636363636364,263,275
+embedder_3/evaluation_czech_3_2.csv,0.9309090909090909,256,275
+embedder_3/evaluation_english_3_1.csv,0.9566666666666667,287,300
+embedder_3/evaluation_english_3_2.csv,0.95,285,300
