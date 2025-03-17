@@ -67,9 +67,9 @@ if __name__ == "__main__":
     print("running 3_evaluate_response.py")
 
     # ----------------------------------------------
-    embedder = 2  # Select embedder
+    embedder = 3  # Select embedder
     language = "english"  # Choose "english" or "czech"
-    number = 1  # number of the generation response
+    number = 2  # number of the generation response (version of question 1 or 2)
     # ----------------------------------------------
 
     df = evaluate_results(embedder, language,number)

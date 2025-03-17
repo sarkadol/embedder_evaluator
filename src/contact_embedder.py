@@ -3,13 +3,14 @@ import json
 from src.utils import *
 
 #----------------------------------------------
-embedder = 1  # Change this to 2 for embedder_2
+embedder = 3  # Change this to 2 for embedder_2
 top_k = 5
 use_ssh = False
 #----------------------------------------------
 
 # Load the URL from the text file
 url = load_url(embedder)
+print(f"Using embedder url: {url}\n")
 
 if use_ssh:
     url = f"https://localhost:9000/v1/ceritsc-documentation/search"

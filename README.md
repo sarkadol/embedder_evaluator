@@ -1,55 +1,63 @@
-# Project Overview
-This project contains several scripts designed to evaluate the performance of different embedders by analyzing their results and generating evaluation metrics. The scripts read the results from JSON files, process the data, and output the evaluation results to CSV files.
+# **Embedder Evaluation Framework**
 
+This project evaluates different embedders by analyzing their results and generating evaluation metrics. 
+The scripts query embedders, process the retrieved data, and output evaluation results to JSON and CSV files.
 
-Scripts:
-- 1_contact_embedder.py: Queries the embedder API with a specific question and retrieves the top results.
-- 2_embedder_testing.py: Evaluates the performance of the embedder by querying it with a set of questions and comparing the retrieved documents with the correct documents.
-- 3_evaluate_response.py: Processes the results of the embedder evaluation and calculates various metrics such as accuracy and mean position score.
+## **Project Structure**
 
-- print_results.py: Prints a summary of the accuracy for each embedder and language combination.
-- utils.py: Contains utility functions used by the other scripts.
-- contact_chatbot.py: for testing the connection
-- contact_embedder.py: for testing the connection
-- analyze_mdx_files.py: take a look at the documents that the embedders work with
+### **1. Query and Generate Questions**
+- **[`1_generate_questions.py`](1_generate_questions.py)**  
+  Generates questions for evaluation by reading `.mdx` files and using an AI model to create relevant queries.  
+  **Key Functions:**  
+  - `load_api_key(filepath)`: Reads API key from a file.  
+  - `get_available_models()`: Fetches available AI models.  
+  - `read_mdx_files(directory, language, max_files)`: Reads `.mdx` files and extracts content.  
+  - `generate_questions(model_id, text, num_questions, language)`: Generates questions from the text.  
+  - `process_mdx_files(language, max_files, num_questions, model_id, number)`: Processes `.mdx` files and saves generated questions.  
 
-## 1_generate_questions.py
+### **2. Query Embedders and Evaluate Their Performance**
+- **[`2_embedder_generating.py`](2_embedder_generating.py)**  
+  Evaluates an embedder’s performance by querying it with generated questions and retrieving the top results.  
+  **Key Functions:**  
+  - `query_embedder(question, top_k, embedder_url)`: Queries the embedder API.  
+  - `evaluate_embedder(json_file, q, k, d, lang, embedder, output_file)`: Evaluates embedder performance and saves results.  
 
-This script is responsible for querying the embedder API with a specific question and retrieving the top results. It reads the URL from a text file based on the chosen embedder and sends an HTTP POST request to the embedder API.
+### **3. Analyze and Score the Embedder’s Results**
+- **[`3_evaluate_response.py`](3_evaluate_response.py)**  
+  Processes the results of the embedder evaluation, calculates metrics (accuracy, mean position score), and saves them to a CSV file.  
+  **Key Functions:**  
+  - `evaluate_results(embedder, language, number)`: Computes evaluation metrics and saves results.  
 
-Key Functions:
+### **4. Helper Scripts**
+- **[`contact_embedder.py`](contact_embedder.py)**  
+  Tests connectivity to the embedder API by sending a sample query and displaying the retrieved results.  
+- **[`contact_chatbot.py`](contact_chatbot.py)**  
+  Tests the chatbot API by retrieving available models and generating responses from `.mdx` file contents.  
+- **[`analyze_mdx_files.py`](analyze_mdx_files.py)**  
+  Analyzes `.mdx` files used in the evaluation, checking for missing headers, duplicate titles, and large files.  
+- **[`utils.py`](utils.py)**  
+  Contains utility functions, including loading API keys, fetching available models, reading `.mdx` files, and handling requests.  
 
+## **How to Use**
+1. **Generate Questions:**  
+   Run `1_generate_questions.py` to create questions from `.mdx` files.  
+2. **Test Embedders:**  
+   Run `2_embedder_generating.py` to evaluate embedders by querying them with generated questions.  
+3. **Evaluate Results:**  
+   Run `3_evaluate_response.py` to calculate accuracy and other metrics.  
+4. **Analyze Results:**  
+   Use `print_results.py` (not included in the uploaded files) to summarize accuracy across embedders.  
+5. **Verify API Connectivity:**  
+   Run `contact_embedder.py` and `contact_chatbot.py` to check if the embedders and chatbot APIs are working correctly.  
 
-load_url(embedder): Reads the URL from a text file based on the chosen embedder.
-query_embedder(question, top_k): Sends a POST request to the embedder API and retrieves the top results. 
-## 2_embedder_generation.py
-This script evaluates the performance of the embedder by querying it with a set of questions and comparing the retrieved documents with the correct documents. It reads the URL from a text file based on the chosen embedder and processes the results to generate evaluation metrics.
+## **Embedders**
+The scripts support querying different embedders via API:  
+1. **Embedder 1:** `https://embedbase-ol.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search`  
+2. **Embedder 2:** `https://embedbase.dyn.cloud.e-infra.cz/v1/ceritsc-documentation/search`
+3. **Embedder 3:** `https://embedbase-dev.dyn.cloud.e-infra.cz/v1/test/search`  
+4. **... (Additional embedders can be configured in the scripts)**  
 
-Key Functions:
-
-
-load_url(embedder): Reads the URL from a text file based on the chosen embedder.
-query_embedder(question, top_k): Sends a POST request to the embedder API and retrieves the top results.
-evaluate_embedder(json_file, q, k, d, lang, output_file): Evaluates the embedder by querying it with a set of questions and comparing the results with the correct documents. 
-
-## 3_evaluate_response.py
-This script processes the results of the embedder evaluation and calculates various metrics such as accuracy and mean position score. It reads the results from a JSON file, processes the data, and outputs the evaluation results to a CSV file.
-
-Key Functions:
-
-
-evaluate_results(embedder, language): Processes the results of the embedder evaluation and calculates various metrics such as accuracy and mean position score.
-print_results.py
-This script aggregates the evaluation results from multiple CSV files and prints a summary of the accuracy for each embedder and language combination.
-
-Key Functions:
-
-
-Aggregates evaluation results from multiple CSV files.
-Prints a summary of the accuracy for each embedder and language combination.
-Usage
-Run 1_contact_embedder.py: This script queries the embedder API with a specific question and retrieves the top results.
-Run 2_embedder_testing.py: This script evaluates the performance of the embedder by querying it with a set of questions and comparing the retrieved documents with the correct documents.
-Run 3_evaluate_response.py: This script processes the results of the embedder evaluation and calculates various metrics such as accuracy and mean position score.
-Run print_results.py: This script aggregates the evaluation results from multiple CSV files and prints a summary of the accuracy for each embedder and language combination.
-Make sure to configure the embedder and language parameters in each script as needed.
+## **Requirements**
+- Python 3.x  
+- Required dependencies installed via `pip install -r requirements.txt`  
+- API key stored in `api_key.txt`  
