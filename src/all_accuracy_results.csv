@@ -1,10 +1,9 @@
 Filename,Accuracy,Correct Matches,Total Questions
-embedder_1/evaluation_czech_1.csv,0.8545454545454545,235,275
+embedder_1/evaluation_czech_1_1.csv,0.8545454545454545,235,275
 embedder_1/evaluation_czech_1_2.csv,0.8472727272727273,233,275
-embedder_1/evaluation_english_1.csv,0.98,294,300
 embedder_1/evaluation_english_1_1.csv,0.98,294,300
-embedder_2/evaluation_czech_2.csv,0.9345454545454546,257,275
+embedder_1/evaluation_english_1_2.csv,0.9666666666666667,290,300
+embedder_2/evaluation_czech_2_1.csv,0.9345454545454546,257,275
 embedder_2/evaluation_czech_2_2.csv,0.9127272727272727,251,275
-embedder_2/evaluation_english_2.csv,0.9666666666666667,290,300
 embedder_2/evaluation_english_2_1.csv,0.9666666666666667,290,300
 embedder_2/evaluation_english_2_2.csv,0.9533333333333334,286,300
