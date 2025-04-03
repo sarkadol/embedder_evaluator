@@ -4,8 +4,10 @@ from src.utils import *
 
 #----------------------------------------------
 embedder = 3  # Change this to 2 for embedder_2
+# !! embedder 3 needs FI EDUROAM or VPN
 top_k = 5
 use_ssh = False
+lang = "cz" # cz or en
 #----------------------------------------------
 
 # Load the URL from the text file
@@ -20,11 +22,21 @@ if use_ssh:
 headers = {
     "Content-Type": "application/json"
 }
-question = "What are the two main components needed to run the Omero application in Kubernetes?"
+if lang == "cz":
+    question = "Jaké jsou dvě hlavní součásti potřebné ke spuštění aplikace Omero v Kubernetes?"
+else:
+    question = "What are the two main components needed to run the Omero application in Kubernetes?"
+
 # Request data
 data = {
     "query": question,
-    "top_k": top_k
+    "top_k": top_k,
+    "chunk_context": -1,
+    # -1 = document
+    # 0 = only one chunk
+    # >0 = number of chunks around the found one
+    #"where": {"lang": lang} # not needed - this is passed automatically when the query language is detected
+
 }
 
 # Sending the request while ignoring the SSL certificate
@@ -41,9 +53,13 @@ except json.JSONDecodeError as e:
     #print(f"Response Text: {response.text}")
 
 if(True):
-    if (False): #see full api
+    if (True): #see full api
         print("\n--- Full API Response ---")
         print(json.dumps(response_data, indent=4))
+        # Count and print the number of returned documents
+        num_docs = len(response_data.get("similarities", []))
+        print(f"\nNumber of returned documents: {num_docs}")
+
     else: # structured
         # Structured output
         print("\n--- API Response ---")
@@ -59,3 +75,6 @@ if(True):
             print(f"  - Score: {similarity.get('score', 'N/A'):.4f}")
             print(f"  - ID: {similarity.get('id', 'N/A')}")
             print(f"  - Data: {similarity.get('data', 'N/A')}...")  # Shortened to 100 characters
+            print(f"  - Data length: {len(similarity.get('data', 'N/A'))}")
+            print(f"  - Chunknumber: {similarity.get('chunknum', 'N/A')}")
+

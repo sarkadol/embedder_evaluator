@@ -1,0 +1,4 @@
+1:
+2:
+3:
+4: po implementaci filtru na zálkadě jazyků - očekávám 100% shodu v jazycích

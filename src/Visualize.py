@@ -14,7 +14,7 @@ df["Language"] = df["Filename"].apply(lambda x: "Czech" if "czech" in x else ("E
 
 #------------------------------------------------
 
-language_preference = "czech"  # Change this to "czech", "english", or "both"
+language_preference = "both"  # Change this to "czech", "english", or "both"
 
 #------------------------------------------------
 

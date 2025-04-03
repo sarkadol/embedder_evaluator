@@ -77,10 +77,13 @@ if __name__ == "__main__":
     d = 100  # Number of documents to test
     lang = "english"  # Language of the questions ("czech" or "english")
     embedder = 3  # Change this to 2 for embedder_2
-    number = 2 #number of the generation response (version of question 1 or 2)
+
+    number = 4 #number of the generation response !!! CHANGE THIS EVERY TIME !!!
+
+    question_version = 1 # or 2
     # ----------------------------------------------
 
     output_file = f"embedder_{embedder}/results_{lang}_{embedder}_{number}.json"  # Output file for results
 
-    json_file = f"questions_mapping_czech_{number}.json" if lang == "czech" else f"questions_mapping_english_{number}.json"
+    json_file = f"questions_mapping_czech_{question_version}.json" if lang == "czech" else f"questions_mapping_english_{question_version}.json"
     evaluate_embedder(json_file, q, k, d, lang, embedder, output_file)

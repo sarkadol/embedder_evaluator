@@ -24,11 +24,14 @@ def evaluate_results(embedder, language, number):
         correct_document = entry["correct_document"]
         question_lang = entry.get("correct_language", "unknown")
         retrieved_docs = entry["retrieved_documents"]
+        print("retr docs",len(retrieved_docs))
 
         retrieved_titles = [doc["metadata"].get("title", "") for doc in retrieved_docs if "metadata" in doc]
         retrieved_langs = [doc["metadata"].get("lang", "unknown") for doc in retrieved_docs if "metadata" in doc]
         num_czech = sum(1 for lang in retrieved_langs if lang == "cz")
         num_engl = sum(1 for lang in retrieved_langs if lang == "en")
+        #if(num_engl==0):
+        #    num_engl = 5-num_czech
 
         correct_found = correct_document in retrieved_titles
         position = retrieved_titles.index(correct_document) + 1 if correct_found else None
@@ -69,7 +72,7 @@ if __name__ == "__main__":
     # ----------------------------------------------
     embedder = 3  # Select embedder
     language = "english"  # Choose "english" or "czech"
-    number = 2  # number of the generation response (version of question 1 or 2)
+    number = 4  # number of the generation response (version of question 1 or 2)
     # ----------------------------------------------
 
     df = evaluate_results(embedder, language,number)
