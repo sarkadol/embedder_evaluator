@@ -1,0 +1,5 @@
+model = jina-embeddings-v3
+chunksize = 500
+chunkoverlap = 100
+vector_dim = 1024
+dataset = test_1024_2
