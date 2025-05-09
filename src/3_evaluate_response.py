@@ -74,10 +74,19 @@ if __name__ == "__main__":
     print("running 3_evaluate_response.py")
 
     # ----------------------------------------------
-    embedder = 7  # Select embedder
-    language = "czech"  # Choose "english" or "czech"
-    number = 1  # number of the generation response (version of question 1 or 2)
+    embedder = 8  # Select embedder
+    #language = "czech"  # Choose "english" or "czech"
+    #number = 1  # number of the generation response (version of question 1 or 2)
     # ----------------------------------------------
 
-    df = evaluate_results(embedder, language,number)
-    print(df.head())
+    #df = evaluate_results(embedder, language,number)
+    #print(df.head())
+
+    languages = ["english", "czech"]
+    versions = [1, 2]
+
+    for lang in languages:
+        for version in versions:
+            df = evaluate_results(embedder, lang, version)
+            if df is not None:
+                print(df.head())

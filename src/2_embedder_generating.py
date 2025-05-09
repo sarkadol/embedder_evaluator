@@ -76,24 +76,26 @@ if __name__ == "__main__":
     q = 5  # Number of questions per document
     k = 5  # Number of top retrieved documents
     d = 100  # Number of documents to test
-    lang = "english"  # Language of the questions ("czech" or "english")
+    #lang = "english"  # Language of the questions ("czech" or "english")
+
     embedder = 6  # Change this to 2 for embedder_2
 
-    number = 2 #number of the generation response !!! CHANGE THIS EVERY TIME !!!
-
-    question_version = 2 # or 2
+    #number = 2 #number of the generation response !!! CHANGE THIS EVERY TIME !!!
+    #question_version = 2 # or 2
+    languages = ["english", "czech"]
+    versions = [1, 2]
     # ----------------------------------------------
 
-    output_file = f"embedder_{embedder}/results_{lang}_{embedder}_{number}.json"  # Output file for results
+    for lang in languages:
+        for version in versions:
+            output_file = f"embedder_{embedder}/results_{lang}_{embedder}_{version}.json"
+            json_file = f"questions_mapping_{lang}_{version}.json"
 
-    json_file = f"questions_mapping_czech_{question_version}.json" if lang == "czech" else f"questions_mapping_english_{question_version}.json"
+            if os.path.exists(output_file):
+                print(f"Output file '{output_file}' already exists.")
+                user_input = input("Do you want to overwrite it? (yes/no): ").strip().lower()
+                if user_input != "yes":
+                    print("Skipping...")
+                    continue
 
-    # New addition here
-    if os.path.exists(output_file):
-        print(f"Output file '{output_file}' already exists.")
-        user_input = input("Do you want to overwrite it? (yes/no): ").strip().lower()
-        if user_input != "yes":
-            print("Aborting process.")
-            exit()
-
-    evaluate_embedder(json_file, q, k, d, lang, embedder, output_file)
+            evaluate_embedder(json_file, q, k, d, lang, embedder, output_file)
