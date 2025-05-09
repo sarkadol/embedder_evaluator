@@ -1,0 +1,1655 @@
+{
+    "embedder_url": "https://embedbase-dev-1024.dyn.cloud.e-infra.cz/v1/test_1024_5/search",
+    "evaluations": [
+        {
+            "question": "Jak lze zajistit, aby nainstalované balíčky zůstaly zachovány po restartu aplikace RStudio?",
+            "correct_document": "RStudio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké uživatelské jméno a heslo jsou potřeba k přihlášení do běžící instance RStudia?",
+            "correct_document": "RStudio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je potřeba k použití RStudia ve webovém JupyterHubu?",
+            "correct_document": "RStudio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou nezbytné pro instalaci RStudia jako aplikace Rancher?",
+            "correct_document": "RStudio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou dva způsoby spuštění RStudia uvedené v dokumentaci?",
+            "correct_document": "RStudio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak vytvořit a uložit konfigurační soubor pro Secure VPN na Windows?",
+            "correct_document": "VPN",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký software je potřeba nainstalovat pro použití Secure VPN na Windows a Linuxu?",
+            "correct_document": "VPN",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde se ukládá konfigurační soubor pro Secure VPN na Linuxových operačních systémech?",
+            "correct_document": "VPN",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze aktivovat a deaktivovat tunel v aplikaci WireGuard na Windows?",
+            "correct_document": "VPN",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký příkaz se používá na Linuxu k aktivaci tunelu pro Secure VPN?",
+            "correct_document": "VPN",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak mohu připojit externí úložiště k desktopové aplikaci?",
+            "correct_document": "Desktop",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co se stane, pokud aplikaci odstraním a později nainstaluji pod stejným názvem?",
+            "correct_document": "Desktop",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou možnosti pro výběr zobrazovacího protokolu při instalaci desktopové aplikace?",
+            "correct_document": "Desktop",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je rozdíl mezi použitím VNC a WEBRTC při připojování k běžící instanci aplikace?",
+            "correct_document": "Desktop",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se přihlásím do desktopové aplikace pomocí VNC?",
+            "correct_document": "Desktop",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je třeba provést pro spuštění skriptu `add_shell.sh`?",
+            "correct_document": "Přidání shellu do obrazu, který jej nemá",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je nutné udělat, pokud chcete používat upravený obraz s přidaným shellem v Kubernetes?",
+            "correct_document": "Přidání shellu do obrazu, který jej nemá",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou důvody, proč některé obrazy neobsahují shell?",
+            "correct_document": "Přidání shellu do obrazu, který jej nemá",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky pro přidání shellu do existujícího obrazu?",
+            "correct_document": "Přidání shellu do obrazu, který jej nemá",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde lze stáhnout skript `add_shell.sh` potřebný pro přidání shellu do obrazu?",
+            "correct_document": "Přidání shellu do obrazu, který jej nemá",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je Logging operátor v Kubernetes clusteru a jaké je jeho hlavní využití?",
+            "correct_document": "Logging",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem `SyslogNGFlow` vybírá logy, které mají být odeslány do konečné výstupní destinace?",
+            "correct_document": "Logging",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým příkazem lze v Kubernetes aplikovat konfigurace zdrojů z YAML souboru pro vytvoření nové loggingové pipeline?",
+            "correct_document": "Logging",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou dvě hlavní komponenty loggingové pipeline v Kubernetes a jakou mají funkci?",
+            "correct_document": "Logging",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak nakonfigurovat `SyslogNGOutput` pro přenos logů pomocí Syslog protokolu?",
+            "correct_document": "Logging",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze bezpečně odstranit běžící instanci Matlabu, aniž by došlo ke ztrátě dat v domovském adresáři?",
+            "correct_document": "Matlab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká je role hesla a uživatelského jména při připojení k aplikaci Matlab pomocí VNC nebo WEBRTC?",
+            "correct_document": "Matlab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze připojit domovský adresář MetaCentrum k aplikaci Matlab bez zadání hesla?",
+            "correct_document": "Matlab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky na zdroje pro spuštění Matlabu a jak je možné je přizpůsobit?",
+            "correct_document": "Matlab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je třeba provést pro spuštění aplikace Matlab na platformě Rancher?",
+            "correct_document": "Matlab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké výchozí kvóty jsou přiřazeny skupinovému projektu?",
+            "correct_document": "Žádost o projekt, řízení přístupu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou dva typy projektů rozlišované v Kubernetes clusteru?",
+            "correct_document": "Žádost o projekt, řízení přístupu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké informace musíte poskytnout, pokud chcete vytvořit novou skupinu pro řízení přístupu?",
+            "correct_document": "Žádost o projekt, řízení přístupu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde je potřeba se přihlásit, abyste mohli spravovat přístup k projektům v Rancheru?",
+            "correct_document": "Žádost o projekt, řízení přístupu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je proces přiřazení skupiny k projektu v systému Perun?",
+            "correct_document": "Žádost o projekt, řízení přístupu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak mohu přidat vlastní anotace k Ingress v Spark aplikaci?",
+            "correct_document": "Spark Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co mám použít místo `hostPath` jako zdroj objemu v clusteru?",
+            "correct_document": "Spark Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký problém může nastat, pokud není správně nastaven `spec.driver.serviceAccount`?",
+            "correct_document": "Spark Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde mohu najít úplnou dokumentaci o struktuře typů `ScheduledSparkApplication` a `SparkApplication`?",
+            "correct_document": "Spark Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká je správná forma URL pro přístup k Spark UI?",
+            "correct_document": "Spark Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakou aplikaci z příkladu lze spustit podle textu?",
+            "correct_document": "Rancher Aplikace",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je maximální počet garantovaných CPU, který lze vybrat, aniž by bylo nutné žádat o další?",
+            "correct_document": "Rancher Aplikace",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co se stane, pokud nevyberete `Přizpůsobit možnosti Helm před instalací` během instalace aplikace?",
+            "correct_document": "Rancher Aplikace",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde můžete omezit grafy pouze na `cerit-sc` při výběru aplikace?",
+            "correct_document": "Rancher Aplikace",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou výchozí kvóty pro garantované CPU a CPU limit v projektu?",
+            "correct_document": "Rancher Aplikace",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké znalosti jsou potřebné pro kontejnerizaci aplikace na této platformě?",
+            "correct_document": "Přehled platformy kontejnerů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké tři způsoby využití platformy jsou k dispozici pro uživatele?",
+            "correct_document": "Přehled platformy kontejnerů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké typy síťových spojení mezi uzly platforma poskytuje?",
+            "correct_document": "Přehled platformy kontejnerů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky pro používání platformy kontejnerů?",
+            "correct_document": "Přehled platformy kontejnerů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Které GPU akcelerátory jsou podporovány platformou?",
+            "correct_document": "Přehled platformy kontejnerů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Je možné změnit název nasazeného grafu během instalace aplikace Osobní monitorování?",
+            "correct_document": "Osobní monitorování",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká je webová adresa pro přístup k osobní instanci Grafany po instalaci?",
+            "correct_document": "Osobní monitorování",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je třeba provést pro instalaci aplikace Osobní monitorování?",
+            "correct_document": "Osobní monitorování",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co se stane po úspěšné instalaci aplikace Osobní monitorování?",
+            "correct_document": "Osobní monitorování",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké informace je nutné změnit při instalaci pro autentizaci do instance Grafany?",
+            "correct_document": "Osobní monitorování",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou důsledky sdílení tokenu pro přístup k notebooku s jinými uživateli?",
+            "correct_document": "JupyterHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou minimální a maximální zdroje (CPU, RAM, GPU) dostupné pro Jupyter notebooky na této platformě?",
+            "correct_document": "JupyterHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je třeba provést při vytváření vlastního obrazu pro JupyterHub?",
+            "correct_document": "JupyterHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou podmínky pro využití AI GPT modelu v rámci JupyterHub?",
+            "correct_document": "JupyterHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je postup pro obnovení neplatného účtu MetaCentra?",
+            "correct_document": "JupyterHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký vzorec poděkování by měl být použit v publikacích vytvořených s podporou MetaCentra?",
+            "correct_document": "Jak získat přístup",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je proces prodloužení uživatelského účtu na platformě?",
+            "correct_document": "Jak získat přístup",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou základní podmínky pro získání přístupu k platformě CERIT-SC Kubernetes?",
+            "correct_document": "Jak získat přístup",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde mohu změnit heslo pro svůj uživatelský účet v Metacentru?",
+            "correct_document": "Jak získat přístup",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kdo má nárok na bezplatný přístup k uživatelskému rozhraní Rancher?",
+            "correct_document": "Jak získat přístup",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou rozdíly mezi ephemeral úložištěm z místního disku a místní paměti?",
+            "correct_document": "Úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak vytvoříte ad-hoc PVC pomocí šablony pvc.yaml?",
+            "correct_document": "Úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké typy úložiště nabízí Kubernetes pro dynamické vytváření objemů?",
+            "correct_document": "Úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou tři hlavní objekty Kubernetes související s úložištěm?",
+            "correct_document": "Úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké informace jsou potřeba pro přístup k úložišti WebDAV prostřednictvím PVC?",
+            "correct_document": "Úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak je vytvořen výchozí projekt a namespace pro nového uživatele Rancheru?",
+            "correct_document": "Rancher",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co mám dělat, pokud se po přihlášení do Rancheru nezobrazují žádné clustery?",
+            "correct_document": "Rancher",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč není doporučeno používat `kubectl` pro vytváření namespaces v Rancheru?",
+            "correct_document": "Rancher",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se mohu přihlásit do Rancheru na rancher.cloud.e-infra.cz?",
+            "correct_document": "Rancher",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou rozdíly mezi clustery, projekty a namespaces v Rancheru?",
+            "correct_document": "Rancher",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké je použití proměnné `$CI_REGISTRY` v kontextu GitLab pipeline?",
+            "correct_document": "Vytváření Docker kontejnerů s GitLab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřeba pro použití Docker image z GitLab kontejnerového registru, pokud je projekt veřejný nebo soukromý?",
+            "correct_document": "Vytváření Docker kontejnerů s GitLab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem je možné upravit soubor `.gitlab-ci.yml` pro automatické vytváření Docker image?",
+            "correct_document": "Vytváření Docker kontejnerů s GitLab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky pro nastavení GitLab pipeline pro Docker image?",
+            "correct_document": "Vytváření Docker kontejnerů s GitLab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze zkontrolovat stav pipeline po provedení commitu?",
+            "correct_document": "Vytváření Docker kontejnerů s GitLab",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou důležité podmínky pro synchronizaci dat pomocí klienta ownCloud?",
+            "correct_document": "ownCloud",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se postupuje při výběru konkrétní verze aplikace ownCloud k instalaci?",
+            "correct_document": "ownCloud",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je třeba udělat, pokud je potřeba nainstalovat aplikaci ownCloud?",
+            "correct_document": "ownCloud",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze odstranit běžící instanci aplikace ownCloud a co se stane s daty v domovském adresáři?",
+            "correct_document": "ownCloud",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze zkontrolovat, zda je připojený vzdálený souborový systém k domovskému adresáři?",
+            "correct_document": "ownCloud",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je postup, pokud student vidí zprávu \"Access denied\"?",
+            "correct_document": "NBGrader Docs",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou doporučené postupy pro vytváření assignments?",
+            "correct_document": "NBGrader Docs",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je postup pro přidání studenta do kurzu?",
+            "correct_document": "NBGrader Docs",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky na výpočetní zdroje pro studenty?",
+            "correct_document": "NBGrader Docs",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak mohou studenti spravovat své notebookové servery?",
+            "correct_document": "NBGrader Docs",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou doporučené nové možnosti pro bezpečnostní kontext Podu?",
+            "correct_document": "Bezpečnostní Kontext",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké bezpečnostní možnosti musí uživatel přidat do manifestu před nasazením s PSA?",
+            "correct_document": "Bezpečnostní Kontext",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je důležité udělat, pokud spouštíte aplikaci CERIT-SC z Rancheru?",
+            "correct_document": "Bezpečnostní Kontext",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je hlavní rozdíl mezi PSP a PSA v Kubernetes?",
+            "correct_document": "Bezpečnostní Kontext",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou doporučené nové možnosti pro bezpečnostní kontext kontejneru?",
+            "correct_document": "Bezpečnostní Kontext",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká je role řídícího modulu workflow a pracovníků v architektuře Nextflow?",
+            "correct_document": "Spuštění Nextflow Pipelines v Kubernetes",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou doporučené postupy při řešení problémů s běžícími úlohami v Kubernetes pomocí příkazů `kubectl`?",
+            "correct_document": "Spuštění Nextflow Pipelines v Kubernetes",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je rozdíl mezi použitím příkazových možností `-head-image` a `-pod-image` při spuštění Nextflow pipeline v Kubernetes?",
+            "correct_document": "Spuštění Nextflow Pipelines v Kubernetes",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky na konfiguraci Kubernetes pro spuštění Nextflow pipeline?",
+            "correct_document": "Spuštění Nextflow Pipelines v Kubernetes",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřeba k instalaci Nextflow na místním počítači?",
+            "correct_document": "Spuštění Nextflow Pipelines v Kubernetes",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde lze nalézt úplnou dokumentaci ke struktuře typu MPIJob?",
+            "correct_document": "MPI Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem je možné spustit MPI Job po přípravě Docker obrazu a manifestu?",
+            "correct_document": "MPI Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké komponenty musí obsahovat Docker obraz pro použití s MPIJob?",
+            "correct_document": "MPI Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je účel MPI Operatora na platformě Kubernetes?",
+            "correct_document": "MPI Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je vztah mezi atributem `Worker.replicas` a parametrem `-n \"2\"` v manifestu MPI Job?",
+            "correct_document": "MPI Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co obsahuje tajemství generované pomocí konfigurace certifikátu v Kubernetes?",
+            "correct_document": "Certifikát",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou dostupné vydavatelé certifikátů v Kubernetes a jaké jsou jejich specifické použití?",
+            "correct_document": "Certifikát",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je rozdíl mezi vydavateli `letsencrypt-prod` a `letsencrypt-prod-dns`?",
+            "correct_document": "Certifikát",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze nakonfigurovat vydání certifikátu spravovaného Kubernetes pomocí protokolu ACME?",
+            "correct_document": "Certifikát",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Který vydavatel certifikátu by měl být použit pro aplikace, které nejsou vystavovány prostřednictvím Ingress?",
+            "correct_document": "Certifikát",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou nutné pro spuštění aplikace Scipion?",
+            "correct_document": "Scipion",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky na Onedata připojení při instalaci Scipionu?",
+            "correct_document": "Scipion",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze přistupovat k běžící instanci Scipionu po instalaci?",
+            "correct_document": "Scipion",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je doporučený postup pro výběr verze aplikace Scipion v Rancheru?",
+            "correct_document": "Scipion",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co se stane s daty aplikace Scipion, když je aplikace odstraněna a znovu nainstalována?",
+            "correct_document": "Scipion",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co jsou operátoři v kontextu Kubernetes a jaké úkoly automatizují?",
+            "correct_document": "Přehled Operátorů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co jsou Custom Resources (CR) v Kubernetes a jaký je jejich vztah s operátory?",
+            "correct_document": "Přehled Operátorů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je doporučený postup, pokud má uživatel zájem o použití nějakého operátora?",
+            "correct_document": "Přehled Operátorů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč se nedoporučuje nasazovat operátory v rámci jmenného prostoru?",
+            "correct_document": "Přehled Operátorů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde lze najít různé operátory a jak zjistit, zda existuje operátor, který vyhovuje uživatelským potřebám?",
+            "correct_document": "Přehled Operátorů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je třeba udělat, pokud soubor `$HOME/.kube/config` neexistuje?",
+            "correct_document": "Kubectl",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde se nachází soubor `kube config` potřebný pro fungování `kubectl`?",
+            "correct_document": "Kubectl",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká oprávnění by měl mít soubor `$HOME/.kube/config`?",
+            "correct_document": "Kubectl",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze nainstalovat nástroj `kubectl`?",
+            "correct_document": "Kubectl",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Je možné mít více konfigurací clusterů v jednom konfiguračním souboru pro `kubectl`?",
+            "correct_document": "Kubectl",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké možnosti připojení jsou k dispozici pro přístup k aplikaci Ansys po její instalaci?",
+            "correct_document": "Ansys",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze zajistit, aby domovský adresář aplikace Ansys zůstal zachován i po jejím odstranění?",
+            "correct_document": "Ansys",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřebné pro spuštění aplikace Ansys pomocí Rancher?",
+            "correct_document": "Ansys",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je třeba provést pro odstranění běžící instance aplikace Ansys?",
+            "correct_document": "Ansys",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je maximální počet CPU, který lze vybrat při instalaci, aniž by bylo nutné žádat o zvýšení limitu?",
+            "correct_document": "Ansys",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké informace bych měl očekávat v sekci s názvem \"News\"?",
+            "correct_document": "News",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč je v této části dokumentace uvedeno \"none\"?",
+            "correct_document": "News",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "K čemu slouží tato část dokumentace s názvem \"News\"?",
+            "correct_document": "News",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Existují jiné sekce dokumentace, které poskytují aktualizace nebo novinky?",
+            "correct_document": "News",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak mohu zjistit, zda byla tato sekce aktualizována s novými informacemi?",
+            "correct_document": "News",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou postupy pro připojení síťového disku Samba na různých operačních systémech?",
+            "correct_document": "Samba Server",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je potřeba provést pro instalaci Samba serveru pomocí GUI Rancher?",
+            "correct_document": "Samba Server",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký formát má URL adresa pro přístup k síťovému disku přes Samba server?",
+            "correct_document": "Samba Server",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké údaje je potřeba zadat při připojování k Samba serveru na Windows?",
+            "correct_document": "Samba Server",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky pro fungování Samba serveru v Kubernetes?",
+            "correct_document": "Samba Server",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké možnosti mají uživatelé Harboru, pokud chtějí přidat informace o svém obrazu pro veřejné projekty?",
+            "correct_document": "Harbor (hub.cerit.io)",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou hlavní výhody používání Harboru oproti veřejným registrům jako hub.docker.com?",
+            "correct_document": "Harbor (hub.cerit.io)",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je postup pro přihlášení do Harboru přes příkazový řádek?",
+            "correct_document": "Harbor (hub.cerit.io)",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem mohou uživatelé spravovat nebo mazat své artefakty na Harboru?",
+            "correct_document": "Harbor (hub.cerit.io)",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je maximální limit pro ukládání artefaktů v osobním projektu uživatele na Harboru?",
+            "correct_document": "Harbor (hub.cerit.io)",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze použít vlastní přihlašovací údaje k databázi v manifestu clusteru?",
+            "correct_document": "Postgres Operator Cloudnative-PG",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou hlavní rozdíly mezi nasazením jednotlivé instance a instance clusteru pomocí Postgres Operator Cloudnative-PG?",
+            "correct_document": "Postgres Operator Cloudnative-PG",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem je možné povolit automatické zálohy do S3 úložiště pomocí Postgres Operator?",
+            "correct_document": "Postgres Operator Cloudnative-PG",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřebné pro přístup k databázi z externího světa mimo Kubernetes cluster?",
+            "correct_document": "Postgres Operator Cloudnative-PG",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké možnosti vysoké dostupnosti nabízí Postgres Operator Cloudnative-PG pro replikované clustery?",
+            "correct_document": "Postgres Operator Cloudnative-PG",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký port používá NGINX ve službě a jaký aplikační štítek je potřebný pro směrování provozu do běžícího Podu?",
+            "correct_document": "Jak spustit webový server NGINX",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká jsou správná ID uživatele a skupiny pro spuštění image `nginx-unprivileged`?",
+            "correct_document": "Jak spustit webový server NGINX",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je potřeba upravit v manifestu nasazení, aby byl použit existující PVC?",
+            "correct_document": "Jak spustit webový server NGINX",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký bezpečnostní kontext je potřeba pro spuštění NGINX na multitenantní Kubernetes platformě?",
+            "correct_document": "Jak spustit webový server NGINX",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké je referenční ID pro neprivilegovaný docker image NGINX, který je kompatibilní s danou platformou?",
+            "correct_document": "Jak spustit webový server NGINX",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je název a heslo, které se mají použít pro uživatelské jméno a heslo databáze Postgres?",
+            "correct_document": "Spuštění aplikace Omero",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou dvě hlavní komponenty potřebné pro spuštění aplikace Omero v Kubernetes?",
+            "correct_document": "Spuštění aplikace Omero",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké proměnné prostředí musí být nastaveny pro spuštění `omero-server` v Dockeru?",
+            "correct_document": "Spuštění aplikace Omero",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou kroky pro zpřístupnění `omero-web` z internetu v Kubernetes?",
+            "correct_document": "Spuštění aplikace Omero",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč je nutné použít operátor Postgres při nasazení databáze v Kubernetes?",
+            "correct_document": "Spuštění aplikace Omero",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak je možné dekódovat `access_key` a `secret_key` pro MinIO Tenanta pomocí příkazové řádky?",
+            "correct_document": "MinIO Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou základní kroky pro nasazení jediné instance MinIO Tenanta pomocí MinIO Operatora?",
+            "correct_document": "MinIO Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou specifikace pro vytvoření uživatelského tajného klíče pro MinIO Tenanta?",
+            "correct_document": "MinIO Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze zvýšit bezpečnost přístupu k MinIO úložišti pomocí síťové politiky?",
+            "correct_document": "MinIO Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké služby jsou automaticky vytvořeny pro přístup k MinIO úložišti S3 a k čemu slouží?",
+            "correct_document": "MinIO Operator",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je potřeba udělat, pokud se vaše kerberos jméno nespojí automaticky s Rancher účtem?",
+            "correct_document": "Secrets pro úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké typy objektů lze vytvořit na webové stránce pro generování tajemství?",
+            "correct_document": "Secrets pro úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je postup pro výběr prostoru názvů při generování objektů?",
+            "correct_document": "Secrets pro úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze použít vygenerovaná tajemství s aplikací Matlab?",
+            "correct_document": "Secrets pro úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky před použitím služby pro generování tajemství?",
+            "correct_document": "Secrets pro úložiště",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké je možné řešení chyby Helm nasazení s kódem 413?",
+            "correct_document": "FAQ",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak opravit chybu CreateContainerConfigError spojenou s runAsNonRoot, pokud image kontejneru běží jako root?",
+            "correct_document": "FAQ",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je požadavek na GPU, když nasazení vrací chybu, že `nvidia-smi` vrací `command not found`?",
+            "correct_document": "FAQ",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je potřeba udělat, pokud Deployment vrací chybu kvůli překročení kvóty v Namespace?",
+            "correct_document": "FAQ",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké atributy musí být nastaveny pro Pod, Job, Deployment, aby nasazení nezkrachovalo kvůli chybě související s kvótami?",
+            "correct_document": "FAQ",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadované anotace pro integraci E-infra SSO do ingress?",
+            "correct_document": "Bezpečnost a síťová politika",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak nakonfigurovat SSO endpoint pro použití s ingress?",
+            "correct_document": "Bezpečnost a síťová politika",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou bezpečnostní nedostatky základní autentizace nebo oauth na ingress?",
+            "correct_document": "Bezpečnost a síťová politika",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak může být chyba v autentizaci zmírněna pomocí síťové politiky?",
+            "correct_document": "Bezpečnost a síťová politika",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké změny by měly být provedeny v YAML souborech pro správnou konfiguraci SSO s ingress?",
+            "correct_document": "Bezpečnost a síťová politika",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je účel použití nástroje kubeseal při práci s Kubernetes Secrets?",
+            "correct_document": "Ukládání Kubernetes Secrets do Gitu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je formát zakódovaných dat v YAML souboru pro Kubernetes Secret?",
+            "correct_document": "Ukládání Kubernetes Secrets do Gitu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaká jsou klíčová bezpečnostní opatření implementována prostřednictvím Sealed Secrets?",
+            "correct_document": "Ukládání Kubernetes Secrets do Gitu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem je zajištěna bezpečnost dat v Kubernetes Secrets při jejich ukládání do git repozitáře?",
+            "correct_document": "Ukládání Kubernetes Secrets do Gitu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je proces převodu Kubernetes Secret na Sealed Secret pomocí kubeseal?",
+            "correct_document": "Ukládání Kubernetes Secrets do Gitu",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze přistupovat k datům prostřednictvím Minio serveru?",
+            "correct_document": "Minio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je potřeba zkontrolovat v aplikaci před instalací Minio?",
+            "correct_document": "Minio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze smazat běžící instanci aplikace Minio?",
+            "correct_document": "Minio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou kroky pro spuštění osobního serveru Minio?",
+            "correct_document": "Minio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky na Namespace při instalaci Minio?",
+            "correct_document": "Minio",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč není doporučeno vytvářet namespaces pomocí kubectl?",
+            "correct_document": "Namespaces",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je účelem namespaces v Kubernetes?",
+            "correct_document": "Namespaces",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky by měl uživatel podniknout, pokud nevidí osobní projekt a namespace po přihlášení do Rancher GUI?",
+            "correct_document": "Namespaces",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde může uživatel zkontrolovat své namespaces v Rancher?",
+            "correct_document": "Namespaces",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč by jména namespaces měla být jedinečná v rámci clusteru?",
+            "correct_document": "Namespaces",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké možnosti docker obrazů jsou k dispozici pro použití s virtuálními stroji?",
+            "correct_document": "Spuštění Virtuálního Stroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou předpoklady pro spuštění virtuálního stroje na platformě Rancher?",
+            "correct_document": "Spuštění Virtuálního Stroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze vygenerovat SSH klíč na Linuxu nebo MacOS?",
+            "correct_document": "Spuštění Virtuálního Stroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze zvýšit sdílenou paměť (SHM) pro aplikace využívající GPU?",
+            "correct_document": "Spuštění Virtuálního Stroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem vytvoříme secret s veřejným SSH klíčem pomocí `kubectl`?",
+            "correct_document": "Spuštění Virtuálního Stroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kvóty jsou nastaveny pro osobní projekt a výchozí namespace?",
+            "correct_document": "Projekty, Namespaces a Kvóty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké dva druhy kvót zdrojů používá Kubernetes?",
+            "correct_document": "Projekty, Namespaces a Kvóty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou důsledky překročení limitů zdrojů pro běžící kontejner?",
+            "correct_document": "Projekty, Namespaces a Kvóty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je správný postup pro vytvoření nového namespace pomocí uživatelského rozhraní Rancher?",
+            "correct_document": "Projekty, Namespaces a Kvóty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze přidělit větší kvóty zdrojů, než jsou výchozí pro osobní projekt?",
+            "correct_document": "Projekty, Namespaces a Kvóty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co se stane, pokud Docker obraz nemá specifikovaný číselný UID?",
+            "correct_document": "Omezení spouštění Docker obrazů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké oprávnění je vyžadováno pro spuštění Docker obrazu na této platformě?",
+            "correct_document": "Omezení spouštění Docker obrazů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze přistupovat k portům nižším než 1024 v této kontejnerové platformě?",
+            "correct_document": "Omezení spouštění Docker obrazů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké důsledky má nemožnost spouštění kontejnerů s root oprávněními?",
+            "correct_document": "Omezení spouštění Docker obrazů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je doporučený postup pro zajištění zápisu do adresářů jako `/var/log/`?",
+            "correct_document": "Omezení spouštění Docker obrazů",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se přihlásit na platformu Rancher před instalací ShinySOM?",
+            "correct_document": "ShinySOM",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co se stane s daty v domovském adresáři, když je aplikace ShinySOM odstraněna a znovu nainstalována?",
+            "correct_document": "ShinySOM",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou doporučení pro nastavení hesla při instalaci ShinySOM?",
+            "correct_document": "ShinySOM",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je postup pro instalaci aplikace ShinySOM?",
+            "correct_document": "ShinySOM",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je potřeba udělat, pokud chcete odstranit běžící instanci ShinySOM?",
+            "correct_document": "ShinySOM",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kolik uzlů je v současné době dostupných v kuba-clusteru?",
+            "correct_document": "Dostupný hardware",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak je řešeno zálohování dat v kubh-clusteru?",
+            "correct_document": "Dostupný hardware",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou specifikace úložiště pro běžné clustery?",
+            "correct_document": "Dostupný hardware",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou specifikace připravovaných kub-c uzlů, které se mají připojit ke kuba-clusteru?",
+            "correct_document": "Dostupný hardware",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké GPU jsou dostupné v kuba-clusteru a kolik jich je?",
+            "correct_document": "Dostupný hardware",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde mohu najít další informace o požadavkovém systému?",
+            "correct_document": "Kontakty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké informace jsou k dispozici ohledně požadavkového systému?",
+            "correct_document": "Kontakty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak mohu kontaktovat tým spravující požadavkový systém?",
+            "correct_document": "Kontakty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kdo je zodpovědný za správu požadavkového systému?",
+            "correct_document": "Kontakty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je kontaktní email pro požadavkový systém?",
+            "correct_document": "Kontakty",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze přizpůsobit zobrazenou zprávu v nasazení \"Hello World\"?",
+            "correct_document": "Tutorial pro Hello World",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké zdroje Kubernetes musíme vytvořit pro nasazení aplikace \"Hello World\"?",
+            "correct_document": "Tutorial pro Hello World",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké bezpečnostní požadavky jsou kladeny na kontejnery v \"kuba-cluster\"?",
+            "correct_document": "Tutorial pro Hello World",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze vystavit aplikaci jako síťovou službu v Kubernetes?",
+            "correct_document": "Tutorial pro Hello World",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké příkazy `kubectl` lze použít pro kontrolu stavu a logů nasazených zdrojů?",
+            "correct_document": "Tutorial pro Hello World",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřeba k instalaci aplikace phpMyAdmin?",
+            "correct_document": "phpMyAdmin",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké údaje je třeba vyplnit při přizpůsobení aplikace phpMyAdmin?",
+            "correct_document": "phpMyAdmin",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se přihlásit na platformu potřebnou ke spuštění phpMyAdmin?",
+            "correct_document": "phpMyAdmin",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze aplikaci phpMyAdmin odinstalovat?",
+            "correct_document": "phpMyAdmin",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké informace je nutné zadat při přihlašování do phpMyAdmin?",
+            "correct_document": "phpMyAdmin",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakou funkci plní WES v rámci infrastruktury TES?",
+            "correct_document": "TES/WES",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké pracovní postupy umožňuje WES klientům vykonávat?",
+            "correct_document": "TES/WES",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou české koncové body pro TESK a WES?",
+            "correct_document": "TES/WES",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde lze najít zdrojový kód pro TESK a WES?",
+            "correct_document": "TES/WES",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co je TESK a na čem je jeho implementace založena?",
+            "correct_document": "TES/WES",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou základní příkazy používané v Dockerfile pro vytvoření Docker image?",
+            "correct_document": "Dockerfile",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je doporučený postup před vytvořením vlastního Docker image?",
+            "correct_document": "Dockerfile",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Proč je důležité používat `&&` místo `;` při řetězení příkazů v Dockerfile?",
+            "correct_document": "Dockerfile",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze ručně sestavit Docker image pomocí Dockerfile?",
+            "correct_document": "Dockerfile",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze testovat a spouštět Docker image lokálně před jeho nasazením na Kubernetes?",
+            "correct_document": "Dockerfile",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou limity pro spuštění projektů na BinderHub a co dělat, pokud dosáhnu těchto limitů?",
+            "correct_document": "BinderHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se provádí autentizace pro použití BinderHub na CERIT-SC?",
+            "correct_document": "BinderHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem mohu přizpůsobit výchozí Docker obraz pro své potřeby na BinderHub?",
+            "correct_document": "BinderHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde najdu své běžící notebooky a jak se k nim připojím?",
+            "correct_document": "BinderHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze specifikovat vlastní zdroje jako GPU nebo paměť pro notebooky běžící na BinderHub?",
+            "correct_document": "BinderHub",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se přihlásit na platformu Rancher před spuštěním instalace Moodle?",
+            "correct_document": "Moodle",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak nastavit externí databázi pro Moodle, pokud nepoužíváte interní MariaDB?",
+            "correct_document": "Moodle",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky je třeba udělat pro výběr aplikace Moodle v Rancheru?",
+            "correct_document": "Moodle",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze smazat běžící instanci Moodle a co se stane s daty v domovském adresáři?",
+            "correct_document": "Moodle",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké možnosti přizpůsobení jsou k dispozici při instalaci Moodle?",
+            "correct_document": "Moodle",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jakým způsobem lze zabezpečit přístup k aplikaci pomocí autentizace při použití Ingress?",
+            "correct_document": "Vystavování aplikací",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřebné pro vystavení webové aplikace na internetu pomocí Kubernetes Ingress?",
+            "correct_document": "Vystavování aplikací",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou možnosti pro vystavení aplikace, která nepoužívá protokol HTTP, v Kubernetes?",
+            "correct_document": "Vystavování aplikací",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký je hlavní rozdíl mezi webovými a ostatními aplikacemi v kontextu IP adres?",
+            "correct_document": "Vystavování aplikací",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak lze nastavit vlastní doménové jméno pro webovou aplikaci v Kubernetes?",
+            "correct_document": "Vystavování aplikací",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou nejlepší praktiky pro organizaci projektů v Snakemake?",
+            "correct_document": "Snakemake",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak Snakemake zpracovává závislosti mezi úlohami?",
+            "correct_document": "Snakemake",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou základní funkce Snakemake?",
+            "correct_document": "Snakemake",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak se píší pravidla v Snakemake?",
+            "correct_document": "Snakemake",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak začít s instalací Snakemake?",
+            "correct_document": "Snakemake",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaký jednoduchý manifestní soubor můžeme vytvořit pro testování agenta?",
+            "correct_document": "GitLab Kubernetes Agent",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké kroky jsou potřebné pro vytvoření a aplikaci souboru nasazení v Kubernetes?",
+            "correct_document": "GitLab Kubernetes Agent",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou požadavky pro instalaci GitLab Kubernetes Agenta?",
+            "correct_document": "GitLab Kubernetes Agent",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak získat a uložit token agenta pro připojení k clusteru?",
+            "correct_document": "GitLab Kubernetes Agent",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Kde by měl být umístěn konfigurační soubor agenta v repozitáři?",
+            "correct_document": "GitLab Kubernetes Agent",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou možné jednotky pro specifikaci CPU zdrojů?",
+            "correct_document": "GPU a další zdroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Co zahrnuje zdroj \"ephemeral-storage\" a jak se jednotky specifikují?",
+            "correct_document": "GPU a další zdroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jak může uživatel zvýšit velikost sdílené paměti pro kontejner?",
+            "correct_document": "GPU a další zdroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou různé způsoby požadavku GPU zdrojů?",
+            "correct_document": "GPU a další zdroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        },
+        {
+            "question": "Jaké jsou rozdíly mezi \"Požadavky\" a \"Limity\" zdrojů v Kubernetes?",
+            "correct_document": "GPU a další zdroje",
+            "correct_language": "cz",
+            "retrieved_documents": []
+        }
+    ]
+}
