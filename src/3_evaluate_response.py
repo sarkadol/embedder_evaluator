@@ -18,12 +18,15 @@ def evaluate_results(embedder, language, number):
     correct_matches = 0
     total_questions = len(results["evaluations"])
     position_scores = []
+    total_retrieved_docs = 0
 
     for entry in results["evaluations"]:
         question = entry["question"]
         correct_document = entry["correct_document"]
         question_lang = entry.get("correct_language", "unknown")
         retrieved_docs = entry["retrieved_documents"]
+        total_retrieved_docs = len(retrieved_docs)
+
         print("retr docs",len(retrieved_docs))
 
         retrieved_titles = [doc["metadata"].get("title", "") for doc in retrieved_docs if "metadata" in doc]
@@ -50,7 +53,8 @@ def evaluate_results(embedder, language, number):
             "correct_found": correct_found,
             "question_lang": question_lang,
             "num_czech": num_czech,
-            "num_engl": num_engl
+            "num_engl": num_engl,
+            "total_retrieved_docs":total_retrieved_docs
         })
 
     accuracy = correct_matches / total_questions if total_questions > 0 else 0
@@ -70,9 +74,9 @@ if __name__ == "__main__":
     print("running 3_evaluate_response.py")
 
     # ----------------------------------------------
-    embedder = 3  # Select embedder
-    language = "english"  # Choose "english" or "czech"
-    number = 4  # number of the generation response (version of question 1 or 2)
+    embedder = 7  # Select embedder
+    language = "czech"  # Choose "english" or "czech"
+    number = 1  # number of the generation response (version of question 1 or 2)
     # ----------------------------------------------
 
     df = evaluate_results(embedder, language,number)
