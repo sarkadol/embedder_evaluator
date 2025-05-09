@@ -3,7 +3,7 @@ import requests
 import json
 import random
 from pathlib import Path
-from src.utils import *
+from utils import *
 import urllib3
 
 #urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) # this supresses the unverified https request warning

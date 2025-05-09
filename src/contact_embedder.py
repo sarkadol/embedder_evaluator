@@ -1,6 +1,6 @@
 import requests
 import json
-from src.utils import *
+from utils import *
 
 #----------------------------------------------
 embedder = 6  # Change this to 2 for embedder_2
